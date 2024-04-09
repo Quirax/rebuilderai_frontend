@@ -2,6 +2,8 @@
 
 리빌더에이아이 프론트엔드 사전과제: [VRIN 3D 웹 랜딩페이지](https://vrin.co.kr/)의 클론 코딩
 
+배포 위치: https://quirax.github.io/rebuilderai_frontend
+
 ## 조건
 
 1. React, i18next, pretendard 라이브러리 사용
