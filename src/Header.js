@@ -27,7 +27,7 @@ function Header({ mode }) {
             </div>
             <div className='right'>
                 {rightElements}
-                <button>{t('header.getStarted')}</button> {/* https://vrin.co.kr/register 로 연결 */}
+                <button>{t('getStarted')}</button> {/* https://vrin.co.kr/register 로 연결 */}
             </div>
         </header>
     )

@@ -1,6 +1,8 @@
 {
+    "getStarted": "무료로 시작하기",
     "header.ifYouWant": "VRIN 3D를 사용해보고 싶다면",
     "header.pricing": "가격정책",
     "header.login": "로그인",
-    "header.getStarted": "무료로 시작하기"
+    "section[0].head": "AI로 만드는 3D 모델",
+    "section[0].body": "인공지능으로 자동 생성되는 3D 모델과<1/>손쉬운 편집을 경험해보세요."
 }
