@@ -4,6 +4,8 @@ import Header, { HEADER_MODE } from './Header'
 import ImagedSection from './Components/ImagedSection'
 import { lf2br } from './util'
 import VideoedSection from './Components/VideoedSection'
+import DescribingSection from './Components/DescribingSection'
+import { PercentageContainer, PercentageView } from './Components/PercentageView'
 
 function App() {
     const { t } = useTranslation()
@@ -39,6 +41,28 @@ function App() {
                 <h1>{lf2br(t('section[3].head'))}</h1>
                 <p>{lf2br(t('section[3].body'))}</p>
             </VideoedSection>
+            <DescribingSection>
+                <h2>{t('section[4].subtitle')}</h2>
+                <h1>{t('section[4].title')}</h1>
+                <p>{lf2br(t('section[4].body'))}</p>
+                <PercentageContainer>
+                    <PercentageView
+                        description={t('section[4].percent[0].description')}
+                        base={t('section[4].percent[0].base')}>
+                        {t('section[4].percent[0].value')}↓ {/* TODO: convert to svg */}
+                    </PercentageView>
+                    <PercentageView
+                        description={t('section[4].percent[1].description')}
+                        base={t('section[4].percent[1].base')}>
+                        {t('section[4].percent[1].value')}↓ {/* TODO: convert to svg */}
+                    </PercentageView>
+                    <PercentageView
+                        description={t('section[4].percent[2].description')}
+                        base={t('section[4].percent[2].base')}>
+                        {t('section[4].percent[2].value')}↓ {/* TODO: convert to svg */}
+                    </PercentageView>
+                </PercentageContainer>
+            </DescribingSection>
         </>
     )
 }

@@ -10,5 +10,17 @@
     "section[2].head": "AI 기술로 더욱 빠르고\n더욱 리얼하게",
     "section[2].body": "3D 모델을 제작하세요.",
     "section[3].head": "3D의 손쉬운 편집과\n다양한 활용",
-    "section[3].body": "VRIN 3D와 함께 시작하세요."
+    "section[3].body": "VRIN 3D와 함께 시작하세요.",
+    "section[4].subtitle": "The simplest way to generate",
+    "section[4].title": "시간도 비용도 절약하는 3D 모델 제작",
+    "section[4].body": "무겁고 비싼 3D 스캐닝 장비없이 핸드폰 하나로 완성되는 3D,\n시간과 비용을 절약해 콘텐츠를 효율적으로 제작하세요.",
+    "section[4].percent[0].value": "80%",
+    "section[4].percent[0].description": "기기비용 절감",
+    "section[4].percent[0].base": "3D 스캐너 기준",
+    "section[4].percent[1].value": "4H",
+    "section[4].percent[1].description": "시간 감축",
+    "section[4].percent[1].base": "모델러 작업시간 기준",
+    "section[4].percent[2].value": "90%",
+    "section[4].percent[2].description": "에셋 생성비용 절감",
+    "section[4].percent[2].base": "모델러 인건비 기준"
 }
