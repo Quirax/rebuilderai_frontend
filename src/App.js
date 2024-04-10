@@ -6,6 +6,7 @@ import { lf2br } from './util'
 import VideoedSection from './Components/VideoedSection'
 import DescribingSection from './Components/DescribingSection'
 import { PercentageContainer, PercentageView } from './Components/PercentageView'
+import MouseoverView from './Components/MouseoverView'
 
 function App() {
     const { t } = useTranslation()
@@ -62,6 +63,40 @@ function App() {
                         {t('section[4].percent[2].value')}↓ {/* TODO: convert to svg */}
                     </PercentageView>
                 </PercentageContainer>
+            </DescribingSection>
+            <DescribingSection>
+                <h2>{t('section[5].subtitle')}</h2>
+                <h1>{t('section[5].title')}</h1>
+                <div>
+                    <MouseoverView
+                        mouseleave={
+                            <>
+                                <div>{lf2br(t('section[5].mouseover[0].mouseleave'))}</div>
+                                <img src='' />
+                            </>
+                        }
+                        mouseover={
+                            <>
+                                <div>{lf2br(t('section[5].mouseover[0].mouseover'))}</div>
+                                <img src='' />
+                            </>
+                        }
+                    />
+                    <MouseoverView
+                        mouseleave={
+                            <>
+                                <div>{lf2br(t('section[5].mouseover[1].mouseleave'))}</div>
+                                <img src='' />
+                            </>
+                        }
+                        mouseover={
+                            <>
+                                <div>{lf2br(t('section[5].mouseover[1].mouseover'))}</div>
+                                <img src='' />
+                            </>
+                        }
+                    />
+                </div>
             </DescribingSection>
         </>
     )

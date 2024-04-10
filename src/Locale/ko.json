@@ -22,5 +22,11 @@
     "section[4].percent[1].base": "모델러 작업시간 기준",
     "section[4].percent[2].value": "90%",
     "section[4].percent[2].description": "에셋 생성비용 절감",
-    "section[4].percent[2].base": "모델러 인건비 기준"
+    "section[4].percent[2].base": "모델러 인건비 기준",
+    "section[5].subtitle": "One-stop solution",
+    "section[5].title": "스캔부터 편집까지 VRIN 3D에서 한번에",
+    "section[5].mouseover[0].mouseleave": "모바일 기반의\n간편한\n3D 스캐닝",
+    "section[5].mouseover[0].mouseover": "스튜디오와 고가의 스캐너 없이도\n누구나, 언제나 가능한 3D 스캐닝",
+    "section[5].mouseover[1].mouseleave": "누구나 손쉬운 편집이\n가능하도록\nVRIN 3D\n에디터",
+    "section[5].mouseover[1].mouseover": "AI 재질 생성, 배경 편집 등\n에셋을 빠르게 편집"
 }
