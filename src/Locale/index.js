@@ -9,7 +9,7 @@ import ko from './ko.json'
 i18n.use(initReactI18next) // Transfer i18n to react-i18next
     .init({
         debug: true, // TODO: reset by comment out
-        fallbackLng: 'ko', // Set default language to korean
+        fallbackLng: 'en', // Set default language to korean
         resources: {
             en: { translation: en },
             ko: { translation: ko },

@@ -4,5 +4,11 @@
     "header.pricing": "가격정책",
     "header.login": "로그인",
     "section[0].head": "AI로 만드는 3D 모델",
-    "section[0].body": "인공지능으로 자동 생성되는 3D 모델과<1/>손쉬운 편집을 경험해보세요."
+    "section[0].body": "인공지능으로 자동 생성되는 3D 모델과\n손쉬운 편집을 경험해보세요.",
+    "section[1].head": "모바일 기반의\n간편한 3D 스캐닝",
+    "section[1].body": "스튜디오와 고가의 스캐너 없이도\n누구나, 언제든",
+    "section[2].head": "AI 기술로 더욱 빠르고\n더욱 리얼하게",
+    "section[2].body": "3D 모델을 제작하세요.",
+    "section[3].head": "3D의 손쉬운 편집과\n다양한 활용",
+    "section[3].body": "VRIN 3D와 함께 시작하세요."
 }
