@@ -123,6 +123,10 @@ function App() {
                 <p>{lf2br(t('section[6].body'))}</p>
                 <SlideshowView dataset={slideshowDataset} />
             </DescribingSection>
+            <section class='start_now'>
+                <p>{t('section[7]')}</p>
+                <button>{t('getStarted')}</button>
+            </section>
         </>
     )
 }
