@@ -21,7 +21,7 @@ function App() {
     return (
         <>
             <Header mode={HEADER_MODE.OnTop} />
-            <Header mode={HEADER_MODE.Other} />
+            {/* <Header mode={HEADER_MODE.Other} /> */}
             <ImagedSection src=''>
                 {/* TODO: add source */}
                 <h1>{lf2br(t('section[0].head'))}</h1>

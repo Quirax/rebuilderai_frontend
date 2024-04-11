@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Logo } from './Components/Logo'
 import './Header.css'
+import { GetStartedButton } from './Components/GetStartedButton'
 
 const HEADER_MODE = Object.freeze({
     OnTop: 'on_top',
@@ -40,7 +41,7 @@ function Header({ mode }) {
             </div>
             <div className='right'>
                 {rightElements}
-                <button>{t('getStarted')}</button> {/* https://vrin.co.kr/register 로 연결 */}
+                <GetStartedButton />
             </div>
         </header>
     )
