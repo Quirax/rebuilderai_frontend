@@ -28,5 +28,11 @@
     "section[5].mouseover[0].mouseleave": "모바일 기반의\n간편한\n3D 스캐닝",
     "section[5].mouseover[0].mouseover": "스튜디오와 고가의 스캐너 없이도\n누구나, 언제나 가능한 3D 스캐닝",
     "section[5].mouseover[1].mouseleave": "누구나 손쉬운 편집이\n가능하도록\nVRIN 3D\n에디터",
-    "section[5].mouseover[1].mouseover": "AI 재질 생성, 배경 편집 등\n에셋을 빠르게 편집"
+    "section[5].mouseover[1].mouseover": "AI 재질 생성, 배경 편집 등\n에셋을 빠르게 편집",
+    "section[6].subtitle": "Various contents with VRIN 3D",
+    "section[6].title": "생성한 3D 모델로 제작하는 다양한 콘텐츠",
+    "section[6].body": "VRIN 3D에서 제작한 3D 모델을 다운받아\n상품 홍보, 가상쇼룸, 광고 VFX 등에 사용하세요.",
+    "section[6].slideshow[0]": "가상쇼룸",
+    "section[6].slideshow[1]": "전시",
+    "section[6].slideshow[2]": "상품홍보"
 }

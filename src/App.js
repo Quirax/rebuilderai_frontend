@@ -7,9 +7,16 @@ import VideoedSection from './Components/VideoedSection'
 import DescribingSection from './Components/DescribingSection'
 import { PercentageContainer, PercentageView } from './Components/PercentageView'
 import MouseoverView from './Components/MouseoverView'
+import { createSlideshowDatasetItem, SlideshowView } from './Components/SlideshowView'
 
 function App() {
     const { t } = useTranslation()
+
+    const slideshowDataset = [
+        createSlideshowDatasetItem(t('section[6].slideshow[0]'), '', ''),
+        createSlideshowDatasetItem(t('section[6].slideshow[1]'), '', ''),
+        createSlideshowDatasetItem(t('section[6].slideshow[2]'), '', ''),
+    ]
 
     return (
         <>
@@ -72,13 +79,19 @@ function App() {
                         mouseleave={
                             <>
                                 <div>{lf2br(t('section[5].mouseover[0].mouseleave'))}</div>
-                                <img src='' />
+                                <img
+                                    src=''
+                                    alt=''
+                                />
                             </>
                         }
                         mouseover={
                             <>
                                 <div>{lf2br(t('section[5].mouseover[0].mouseover'))}</div>
-                                <img src='' />
+                                <img
+                                    src=''
+                                    alt=''
+                                />
                             </>
                         }
                     />
@@ -86,17 +99,29 @@ function App() {
                         mouseleave={
                             <>
                                 <div>{lf2br(t('section[5].mouseover[1].mouseleave'))}</div>
-                                <img src='' />
+                                <img
+                                    src=''
+                                    alt=''
+                                />
                             </>
                         }
                         mouseover={
                             <>
                                 <div>{lf2br(t('section[5].mouseover[1].mouseover'))}</div>
-                                <img src='' />
+                                <img
+                                    src=''
+                                    alt=''
+                                />
                             </>
                         }
                     />
                 </div>
+            </DescribingSection>
+            <DescribingSection>
+                <h2>{t('section[6].subtitle')}</h2>
+                <h1>{t('section[6].title')}</h1>
+                <p>{lf2br(t('section[6].body'))}</p>
+                <SlideshowView dataset={slideshowDataset} />
             </DescribingSection>
         </>
     )
