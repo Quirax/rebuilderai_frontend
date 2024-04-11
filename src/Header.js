@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next'
+import { Logo } from './Components/Logo'
+import './Header.css'
 
 const HEADER_MODE = Object.freeze({
     OnTop: 'on_top',
@@ -34,7 +36,7 @@ function Header({ mode }) {
     return (
         <header className={mode}>
             <div className='left'>
-                <span>VRIN</span> {/* 이미지 로고로 변경 */}
+                <Logo />
             </div>
             <div className='right'>
                 {rightElements}
