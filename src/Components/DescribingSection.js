@@ -1,9 +1,10 @@
-function DescribingSection({ children }) {
-    return (
-        <section className='describing'>
-            <div class='contents'>{children}</div>
-        </section>
-    )
-}
+/**
+ * A simple section node describing contents defined as children
+ */
+const DescribingSection = ({ children }) => (
+    <section className='describing'>
+        <div class='contents'>{children}</div>
+    </section>
+)
 
-export default DescribingSection
+export { DescribingSection }

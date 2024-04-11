@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next'
 import './App.css'
 import Header, { HEADER_MODE } from './Header'
-import ImagedSection from './Components/ImagedSection'
+import { ImagedSection } from './Components/ImagedSection'
 import { lf2br } from './util'
-import VideoedSection from './Components/VideoedSection'
-import DescribingSection from './Components/DescribingSection'
+import { VideoedSection } from './Components/VideoedSection'
+import { DescribingSection } from './Components/DescribingSection'
 import { PercentageContainer, PercentageView } from './Components/PercentageView'
-import MouseoverView from './Components/MouseoverView'
+import { MouseoverView } from './Components/MouseoverView'
 import { createSlideshowDatasetItem, SlideshowView } from './Components/SlideshowView'
 
 function App() {
