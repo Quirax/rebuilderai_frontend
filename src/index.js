@@ -4,6 +4,7 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './Locale'
+import 'pretendard/dist/web/variable/pretendardvariable.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
