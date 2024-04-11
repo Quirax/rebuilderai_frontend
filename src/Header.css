@@ -70,3 +70,29 @@ header button:hover {
 header button:active {
     background-color: rgb(0, 0, 150);
 }
+
+header a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: rgb(111, 117, 123);
+}
+
+header a.login {
+    color: rgb(110, 133, 252);
+}
+
+header a.login:hover {
+    color: rgb(93, 108, 250);
+}
+
+header a.login:active {
+    color: rgb(0, 0, 150);
+}

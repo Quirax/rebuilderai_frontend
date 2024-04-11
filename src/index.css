@@ -3,6 +3,7 @@ body {
     max-width: 100%;
     line-height: normal;
     white-space: nowrap;
+    margin: 0;
 }
 
 code {
@@ -16,4 +17,10 @@ code {
     font-family: Pretendard Variable, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue,
         Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, 'Apple Color Emoji', 'Segoe UI Emoji',
         Segoe UI Symbol, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: black; /* TODO: set valid color */
+}
+
+*:hover {
+    outline: 0;
 }

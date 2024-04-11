@@ -29,7 +29,11 @@ function Header({ mode }) {
                     </option>
                     <option value='en'>ENG</option>
                 </select>
-                <a href='https://vrin.co.kr/login'>{t('header.login')}</a>
+                <a
+                    className='login'
+                    href='https://vrin.co.kr/login'>
+                    {t('header.login')}
+                </a>
             </>
         )
     }
