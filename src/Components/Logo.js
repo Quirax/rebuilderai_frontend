@@ -1,6 +1,7 @@
 export const Logo = () => (
     <a href={process.env.PUBLIC_URL}>
         <svg
+            class='logo'
             viewBox='0 0 77 24'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'>

@@ -24,9 +24,9 @@ header > div.right {
 }
 
 /* Logo */
-header svg {
+header svg.logo {
     width: 76px;
-    color: white;
+    fill: white;
 }
 
 /* Get-Started Button */
@@ -95,4 +95,28 @@ header a.login:hover {
 
 header a.login:active {
     color: rgb(0, 0, 150);
+}
+
+header div.dropdown div.current {
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    position: relative;
+    margin-right: -10px;
+    user-select: none;
+}
+
+header div.dropdown div.current svg.glyph {
+    fill: rgb(111, 117, 123);
+    width: 24px;
+    position: absolute;
+    right: -6px;
 }
