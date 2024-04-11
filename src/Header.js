@@ -5,6 +5,10 @@ const HEADER_MODE = Object.freeze({
     Other: 'other',
 })
 
+/**
+ * A header node
+ * @param {HEADER_MODE} mode a flag defines the view of the node
+ */
 function Header({ mode }) {
     const { t } = useTranslation()
 
@@ -14,7 +18,14 @@ function Header({ mode }) {
         rightElements = (
             <>
                 <a href='https://vrin.co.kr/pricing'>{t('header.pricing')}</a>
-                <span>ENG</span> {/* 언어 선택 기능 추가 */}
+                <select>
+                    <option
+                        value='ko'
+                        selected>
+                        KOR
+                    </option>
+                    <option value='en'>ENG</option>
+                </select>
                 <a href='https://vrin.co.kr/login'>{t('header.login')}</a>
             </>
         )
