@@ -12,11 +12,12 @@ header {
     background: rgba(0, 0, 0, 0.5);
 }
 
-header > div {
-    padding: 0 80px;
+header > div.left {
+    padding-left: 80px;
 }
 
 header > div.right {
+    padding-right: 80px;
     gap: 60px;
     display: flex;
     flex-direction: row;
@@ -153,4 +154,34 @@ header div.dropdown dialog.menu div.item.selected span.material-icons {
 
 header div.dropdown dialog.menu div.item:hover {
     background-color: rgb(24, 28, 32);
+}
+
+@media screen and (max-width: 1024px) {
+    header > div.left {
+        padding-left: 70px;
+    }
+
+    header > div.right {
+        padding-right: 70px;
+        gap: 32px;
+        margin-left: 20px;
+    }
+
+    header div.dropdown div.current {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header > div.right {
+        gap: 24px;
+    }
+
+    header button {
+        font-size: 1.4rem;
+        line-height: 130%;
+    }
+}
+
+@media screen and (max-width: 600px) {
 }

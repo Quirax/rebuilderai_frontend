@@ -61,7 +61,7 @@ export function DropdownMenu({ items, onSelect }) {
                     // If this item is selected, add class name 'selected', and add check symbol.
                     if (idx === selected) {
                         classNames.push('selected')
-                        check = <span class='material-icons'>check</span>
+                        check = <span className='material-icons'>check</span>
                     }
 
                     return (
