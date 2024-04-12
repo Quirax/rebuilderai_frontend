@@ -8,7 +8,7 @@ import { DescribingSection } from './Components/DescribingSection'
 import { PercentageContainer, PercentageView } from './Components/PercentageView'
 import { MouseoverView } from './Components/MouseoverView'
 import { createSlideshowDatasetItem, SlideshowView } from './Components/SlideshowView'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 function App() {
     const { t } = useTranslation()
@@ -23,26 +23,40 @@ function App() {
         createSlideshowDatasetItem(t('section[6].slideshow[2]'), '', ''),
     ]
 
+    const imagedSection = useRef()
+
     useEffect(() => {
-        function onResize() {
-            if (window.matchMedia('(max-width: 600px)').matches) setHeaderMode(HEADER_MODE.Mobile)
+        function onScroll() {
+            if (!imagedSection.current) return
+
+            if (window.scrollY >= imagedSection.current.offsetTop + imagedSection.current.offsetHeight)
+                setHeaderMode(HEADER_MODE.Other)
             else setHeaderMode(HEADER_MODE.OnTop)
         }
 
+        function onResize() {
+            if (window.matchMedia('(max-width: 600px)').matches) setHeaderMode(HEADER_MODE.Mobile)
+            else onScroll()
+        }
+
         window.addEventListener('resize', onResize)
+        document.addEventListener('scroll', onResize)
 
         onResize()
 
         return () => {
             window.removeEventListener('resize', onResize)
+            document.removeEventListener('scroll', onResize)
         }
-    }, [])
+    }, [imagedSection.current])
 
     return (
         <>
             <Header mode={headerMode} />
             {/* <Header mode={HEADER_MODE.Other} /> */}
-            <ImagedSection src=''>
+            <ImagedSection
+                src=''
+                referer={imagedSection}>
                 {/* TODO: add source */}
                 <h1>{lf2br(t('section[0].head'))}</h1>
                 <p>{lf2br(t('section[0].body'))}</p>
