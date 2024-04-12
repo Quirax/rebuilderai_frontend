@@ -5,8 +5,8 @@
  */
 const MouseoverView = ({ mouseleave, mouseover }) => (
     <>
-        <div class='mouseleave'>{mouseleave}</div>
-        <div class='mouseover'>{mouseover}</div>
+        <div className='mouseleave'>{mouseleave}</div>
+        <div className='mouseover'>{mouseover}</div>
     </>
 )
 

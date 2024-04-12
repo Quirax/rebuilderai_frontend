@@ -4,6 +4,10 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './Locale'
+import 'pretendard/dist/web/variable/pretendardvariable.css'
+import 'pretendard/dist/web/variable/PretendardVariable-VF.css'
+import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css'
+import 'material-icons/iconfont/material-icons.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

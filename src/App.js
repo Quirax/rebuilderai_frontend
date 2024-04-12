@@ -8,9 +8,14 @@ import { DescribingSection } from './Components/DescribingSection'
 import { PercentageContainer, PercentageView } from './Components/PercentageView'
 import { MouseoverView } from './Components/MouseoverView'
 import { createSlideshowDatasetItem, SlideshowView } from './Components/SlideshowView'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 function App() {
     const { t } = useTranslation()
+
+    const [headerMode, setHeaderMode] = useState(
+        window.matchMedia('(max-width: 600px)').matches ? HEADER_MODE.Mobile : HEADER_MODE.OnTop
+    )
 
     const slideshowDataset = [
         createSlideshowDatasetItem(t('section[6].slideshow[0]'), '', ''),
@@ -18,11 +23,40 @@ function App() {
         createSlideshowDatasetItem(t('section[6].slideshow[2]'), '', ''),
     ]
 
+    const imagedSection = useRef()
+
+    useEffect(() => {
+        function onScroll() {
+            if (!imagedSection.current) return
+
+            if (window.scrollY >= imagedSection.current.offsetTop + imagedSection.current.offsetHeight)
+                setHeaderMode(HEADER_MODE.Other)
+            else setHeaderMode(HEADER_MODE.OnTop)
+        }
+
+        function onResize() {
+            if (window.matchMedia('(max-width: 600px)').matches) setHeaderMode(HEADER_MODE.Mobile)
+            else onScroll()
+        }
+
+        window.addEventListener('resize', onResize)
+        document.addEventListener('scroll', onResize)
+
+        onResize()
+
+        return () => {
+            window.removeEventListener('resize', onResize)
+            document.removeEventListener('scroll', onResize)
+        }
+    }, [imagedSection.current])
+
     return (
         <>
-            <Header mode={HEADER_MODE.OnTop} />
-            <Header mode={HEADER_MODE.Other} />
-            <ImagedSection src=''>
+            <Header mode={headerMode} />
+            {/* <Header mode={HEADER_MODE.Other} /> */}
+            <ImagedSection
+                src=''
+                referer={imagedSection}>
                 {/* TODO: add source */}
                 <h1>{lf2br(t('section[0].head'))}</h1>
                 <p>{lf2br(t('section[0].body'))}</p>
@@ -123,7 +157,7 @@ function App() {
                 <p>{lf2br(t('section[6].body'))}</p>
                 <SlideshowView dataset={slideshowDataset} />
             </DescribingSection>
-            <section class='start_now'>
+            <section className='start_now'>
                 <p>{t('section[7]')}</p>
                 <button>{t('getStarted')}</button>
             </section>

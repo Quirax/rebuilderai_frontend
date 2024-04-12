@@ -1,0 +1,283 @@
+header {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+header > div.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header > div.container > div.left {
+    padding-left: 80px;
+}
+
+header > div.container > div.right {
+    padding-right: 80px;
+    gap: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Logo */
+header svg.logo {
+    width: 76px;
+    fill: white;
+}
+
+/* Get-Started Button */
+header button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(55, 55, 204);
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0px;
+    min-width: 64px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: Pretendard Variable, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue,
+        Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, 'Apple Color Emoji', 'Segoe UI Emoji',
+        Segoe UI Symbol, sans-serif;
+}
+
+header button:hover {
+    background-color: rgb(93, 108, 250);
+    text-decoration: none;
+}
+
+header button:active {
+    background-color: rgb(0, 0, 150);
+}
+
+header a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: rgb(111, 117, 123);
+}
+
+header a.login {
+    color: rgb(110, 133, 252);
+}
+
+header a.login:hover {
+    color: rgb(93, 108, 250);
+}
+
+header a.login:active {
+    color: rgb(0, 0, 150);
+}
+
+header div.dropdown div.current {
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0px;
+    width: 90px;
+    margin-right: -10px;
+}
+
+header div.dropdown div.current svg.glyph {
+    fill: rgb(111, 117, 123);
+    width: 24px;
+    position: absolute;
+    right: -6px;
+}
+
+header div.dropdown dialog.menu[open] {
+    position: absolute;
+    top: 34px;
+    left: 60%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 138px;
+    background-color: rgb(40, 45, 50);
+    padding: 8px 0px;
+    overflow-y: auto;
+    border-radius: 8px;
+    z-index: 1;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+
+header div.dropdown dialog.menu div.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+header div.dropdown dialog.menu div.item.selected {
+    color: rgb(110, 133, 252);
+}
+
+header div.dropdown dialog.menu div.item.selected span.material-icons {
+    font-size: 2rem;
+    color: rgb(68, 74, 232);
+}
+
+header div.dropdown dialog.menu div.item:hover {
+    background-color: rgb(24, 28, 32);
+}
+
+header > dialog.menu {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    header > div.container > div.left {
+        padding-left: 70px;
+    }
+
+    header > div.container > div.right {
+        padding-right: 70px;
+        gap: 32px;
+        margin-left: 20px;
+    }
+
+    header div.dropdown div.current {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header > div.container > div.right {
+        gap: 24px;
+    }
+
+    header button {
+        font-size: 1.4rem;
+        line-height: 130%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 60px;
+    }
+
+    header > div.container > div.left {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header > div.container > div.left svg.glyph {
+        /* width: 18px;
+        height: 12px; */
+        fill: white;
+        cursor: pointer;
+    }
+
+    header > div.container > div.right {
+        padding-right: 20px;
+    }
+
+    header > div.container a.login {
+        width: fit-content;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0px;
+        cursor: pointer;
+    }
+
+    header > div.container svg.logo {
+        width: 46px;
+        fill: white;
+        margin-left: 16px;
+    }
+
+    header > div.menu {
+        position: static;
+        margin: 0;
+        border: none;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 15px 20px 32px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    header > div.menu > * {
+        font-size: 1.4rem;
+    }
+
+    header > div.menu div.dropdown div.current {
+        display: none;
+    }
+
+    header > div.menu div.dropdown dialog.menu {
+        display: flex;
+        background: transparent;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        position: static;
+    }
+
+    header > div.menu div.dropdown dialog.menu div.item {
+        display: block;
+        padding: 0;
+        cursor: pointer;
+        color: rgb(86, 93, 99);
+        background-color: transparent;
+    }
+
+    header > div.menu div.dropdown dialog.menu div.item.selected {
+        color: rgb(255, 255, 255);
+    }
+
+    header > div.menu div.dropdown dialog.menu div.separator {
+        display: flex;
+        width: 1px;
+        height: 18px;
+        background-color: rgb(111, 117, 123);
+        margin: 0px 8px;
+    }
+}
