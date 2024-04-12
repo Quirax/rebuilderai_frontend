@@ -10,12 +10,6 @@ const ImagedSection = ({ children, src, referer }) => (
             backgroundImage: `url(${src})`,
         }}
         ref={referer}>
-        {/* <div className='background'>
-            <img
-                src={src}
-                alt=''
-            />
-        </div> */}
         <div className='container'>
             <div className='contents'>{children}</div>
         </div>
