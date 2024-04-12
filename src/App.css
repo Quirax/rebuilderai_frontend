@@ -44,15 +44,12 @@ button.getStarted {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    /* padding: 12px 20px; */
-    /* border-radius: 4px; */
     color: rgb(255, 255, 255);
     background-color: rgb(55, 55, 204);
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     outline: 0px;
     border: 0px;
-    /* margin: 0px; */
     cursor: pointer;
     user-select: none;
     vertical-align: middle;

@@ -37,44 +37,9 @@ header svg.logo {
 
 /* Get-Started Button */
 header button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     padding: 12px 20px;
     border-radius: 4px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(55, 55, 204);
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    outline: 0px;
-    border: 0px;
     margin: 0px;
-    cursor: pointer;
-    user-select: none;
-    vertical-align: middle;
-    appearance: none;
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 140%;
-    letter-spacing: 0px;
-    min-width: 64px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    font-family: Pretendard Variable, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue,
-        Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, 'Apple Color Emoji', 'Segoe UI Emoji',
-        Segoe UI Symbol, sans-serif;
-}
-
-header button:hover {
-    background-color: rgb(93, 108, 250);
-    text-decoration: none;
-}
-
-header button:active {
-    background-color: rgb(0, 0, 150);
 }
 
 header a {
@@ -184,11 +149,6 @@ header > dialog.menu {
 @media screen and (max-width: 768px) {
     header > div.container > div.right {
         gap: 24px;
-    }
-
-    header button {
-        font-size: 1.4rem;
-        line-height: 130%;
     }
 }
 
