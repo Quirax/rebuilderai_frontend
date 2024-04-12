@@ -97,6 +97,10 @@ header a.login:active {
     color: rgb(0, 0, 150);
 }
 
+header div.dropdown {
+    position: relative;
+}
+
 header div.dropdown div.current {
     color: rgb(255, 255, 255);
     font-size: 1.8rem;
@@ -119,4 +123,40 @@ header div.dropdown div.current svg.glyph {
     width: 24px;
     position: absolute;
     right: -6px;
+}
+
+header div.dropdown dialog.menu[open] {
+    position: absolute;
+    top: 40px;
+    left: 60%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 138px;
+    background-color: rgb(40, 45, 50);
+    padding: 8px 0px;
+    overflow-y: auto;
+    border-radius: 8px;
+    z-index: 1;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+
+header div.dropdown dialog.menu div.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+header div.dropdown dialog.menu div.item.selected {
+    color: rgb(110, 133, 252);
+}
+
+header div.dropdown dialog.menu div.item:hover {
+    background-color: rgb(24, 28, 32);
 }

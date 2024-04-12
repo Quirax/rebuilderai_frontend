@@ -1,12 +1,29 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation, withTranslation } from 'react-i18next'
 import { Logo } from './Components/Logo'
 import './Header.css'
 import { GetStartedButton } from './Components/GetStartedButton'
 import { createDropdownMenuItem, DropdownMenu } from './Components/DropdownMenu'
+import { useCallback } from 'react'
 
 const HEADER_MODE = Object.freeze({
     OnTop: 'on_top',
     Other: 'other',
+})
+
+const LanguageSelector = withTranslation()(({ i18n, items }) => {
+    const onSelectLanguage = useCallback(
+        (language) => {
+            i18n.changeLanguage(language)
+        },
+        [i18n]
+    )
+
+    return (
+        <DropdownMenu
+            items={items}
+            onSelect={onSelectLanguage}
+        />
+    )
 })
 
 /**
@@ -16,7 +33,7 @@ const HEADER_MODE = Object.freeze({
 function Header({ mode }) {
     const { t } = useTranslation()
 
-    const languageList = [createDropdownMenuItem('KOR', false, 'ko'), createDropdownMenuItem('ENG', true, 'en')]
+    const languageList = [createDropdownMenuItem('KOR', true, 'ko'), createDropdownMenuItem('ENG', false, 'en')]
 
     let rightElements = <span>{t('header.ifYouWant')}</span>
 
@@ -24,7 +41,7 @@ function Header({ mode }) {
         rightElements = (
             <>
                 <a href='https://vrin.co.kr/pricing'>{t('header.pricing')}</a>
-                <DropdownMenu items={languageList} />
+                <LanguageSelector items={languageList} />
                 <a
                     className='login'
                     href='https://vrin.co.kr/login'>
