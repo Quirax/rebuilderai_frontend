@@ -9,6 +9,7 @@ import { PercentageContainer, PercentageView } from './Components/PercentageView
 import { MouseoverView } from './Components/MouseoverView'
 import { createSlideshowDatasetItem, SlideshowView } from './Components/SlideshowView'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { GetStartedButton } from './Components/GetStartedButton'
 
 function App() {
     const { t } = useTranslation()
@@ -81,7 +82,7 @@ function App() {
                 {/* TODO: add source */}
                 <h1>{lf2br(t('section[0].head'))}</h1>
                 <p>{lf2br(t('section[0].body'))}</p>
-                <button>{t('getStarted')}</button>
+                <GetStartedButton />
             </ImagedSection>
             <VideoedSection
                 src=''
