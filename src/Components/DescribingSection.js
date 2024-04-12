@@ -3,7 +3,7 @@
  */
 const DescribingSection = ({ children }) => (
     <section className='describing'>
-        <div class='contents'>{children}</div>
+        <div className='contents'>{children}</div>
     </section>
 )
 

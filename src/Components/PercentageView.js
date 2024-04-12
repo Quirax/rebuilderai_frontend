@@ -1,7 +1,7 @@
 /**
  * A container to show percentage differences. Use `PercentageView`s as children.
  */
-const PercentageContainer = ({ children }) => <div class='percentage'>{children}</div>
+const PercentageContainer = ({ children }) => <div className='percentage'>{children}</div>
 
 /**
  * A view to show percentage difference.

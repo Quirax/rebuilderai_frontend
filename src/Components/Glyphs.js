@@ -8,7 +8,7 @@ export function Glyph({ type }) {
         case GLYPH_TYPE.ArrowUp:
             return (
                 <svg
-                    class='glyph'
+                    className='glyph'
                     focusable='false'
                     aria-hidden='true'
                     viewBox='0 0 24 24'
@@ -19,7 +19,7 @@ export function Glyph({ type }) {
         case GLYPH_TYPE.ArrowDown:
             return (
                 <svg
-                    class='glyph'
+                    className='glyph'
                     focusable='false'
                     aria-hidden='true'
                     viewBox='0 0 24 24'

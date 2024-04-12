@@ -13,9 +13,9 @@ const createSlideshowDatasetItem = (description, image_src, video_src) => ({ des
  * @param dataset a dataset to show.
  */
 const SlideshowView = ({ dataset }) => (
-    <div class='slideshow_container'>
+    <div className='slideshow_container'>
         {/* Image Slideshow */}
-        <ul class='slideshow_image'>
+        <ul className='slideshow_image'>
             {dataset.map((item) => (
                 <li key={item.description}>
                     <img
@@ -28,7 +28,7 @@ const SlideshowView = ({ dataset }) => (
         </ul>
 
         {/* Video Slideshow */}
-        <ul class='slideshow_video'>
+        <ul className='slideshow_video'>
             {dataset.map((item) => (
                 <li key={item.description}>
                     <video src={item.video_src} />

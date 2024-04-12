@@ -4,13 +4,13 @@
  */
 const ImagedSection = ({ children, src }) => (
     <section className='imaged'>
-        <div class='background'>
+        <div className='background'>
             <img
                 src={src}
                 alt=''
             />
         </div>
-        <div class='contents'>{children}</div>
+        <div className='contents'>{children}</div>
     </section>
 )
 

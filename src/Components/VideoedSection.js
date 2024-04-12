@@ -5,19 +5,19 @@
  */
 const VideoedSection = ({ children, src, indicators }) => (
     <section className='videoed'>
-        <div class='background'>
+        <div className='background'>
             <video
                 src={src}
                 alt=''
             />
         </div>
-        <div class='contents'>
-            <ul class='left'>
-                {indicators.map((indicator) => (
-                    <li key={indicator}>{indicator}</li>
+        <div className='contents'>
+            <ul className='left'>
+                {indicators.map((indicator, idx) => (
+                    <li key={idx}>{indicator}</li>
                 ))}
             </ul>
-            <div class='right'>{children}</div>
+            <div className='right'>{children}</div>
         </div>
     </section>
 )
