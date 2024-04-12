@@ -6,14 +6,13 @@
 const ImagedSection = ({ children, src, referer }) => (
     <section
         className='imaged'
+        style={{
+            backgroundImage: `url(${src})`,
+        }}
         ref={referer}>
-        <div className='background'>
-            <img
-                src={src}
-                alt=''
-            />
+        <div className='container'>
+            <div className='contents'>{children}</div>
         </div>
-        <div className='contents'>{children}</div>
     </section>
 )
 

@@ -11,5 +11,11 @@ export function GetStartedButton() {
         window.location.href = 'https://vrin.co.kr/register'
     }, [])
 
-    return <button onClick={onClick}>{t('getStarted')}</button>
+    return (
+        <button
+            className='getStarted'
+            onClick={onClick}>
+            <span>{t('getStarted')}</span>
+        </button>
+    )
 }
