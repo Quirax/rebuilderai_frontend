@@ -1,8 +1,15 @@
+/**
+ * Type of the glyph
+ */
 export const GLYPH_TYPE = Object.freeze({
     ArrowUp: 'arrow-up',
     ArrowDown: 'arrow-down',
 })
 
+/**
+ * An utility function that returns glyph svg
+ * @param type A `GLYPH_TYPE` value that indicates which glyph have to be shown.
+ */
 export function Glyph({ type }) {
     switch (type) {
         case GLYPH_TYPE.ArrowUp:

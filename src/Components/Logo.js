@@ -1,3 +1,6 @@
+/**
+ * A node that shows logo
+ */
 export const Logo = () => (
     <a href={process.env.PUBLIC_URL}>
         <svg

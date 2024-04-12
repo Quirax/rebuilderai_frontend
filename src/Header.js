@@ -10,6 +10,9 @@ const HEADER_MODE = Object.freeze({
     Other: 'other',
 })
 
+/**
+ * A node used to change language selected by user
+ */
 const LanguageSelector = withTranslation()(({ i18n, items }) => {
     const onSelectLanguage = useCallback(
         (language) => {
