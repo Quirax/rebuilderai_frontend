@@ -1,0 +1,13 @@
+header div.dropdown {
+    position: relative;
+}
+
+div.dropdown div.current {
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+}

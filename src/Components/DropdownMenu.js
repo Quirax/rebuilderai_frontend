@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Glyph, GLYPH_TYPE } from './Glyphs'
+import './DropdownMenu.css'
 
 /**
  * An utility function that creates structured object used in `DropdownMenu`
