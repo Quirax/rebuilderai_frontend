@@ -2,13 +2,13 @@ import { useTranslation } from 'react-i18next'
 import './App.css'
 import Header, { HEADER_MODE } from './Header'
 import { ImagedSection } from './Components/ImagedSection'
-import { lf2br } from './util'
+import { getValueAccordingToMedia, lf2br } from './util'
 import { VideoedSection } from './Components/VideoedSection'
 import { DescribingSection } from './Components/DescribingSection'
 import { PercentageContainer, PercentageView } from './Components/PercentageView'
 import { MouseoverView } from './Components/MouseoverView'
 import { createSlideshowDatasetItem, SlideshowView } from './Components/SlideshowView'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 function App() {
     const { t } = useTranslation()
@@ -16,6 +16,25 @@ function App() {
     const [headerMode, setHeaderMode] = useState(
         window.matchMedia('(max-width: 600px)').matches ? HEADER_MODE.Mobile : HEADER_MODE.OnTop
     )
+
+    const mediaPair = useMemo(
+        () => ({
+            '(max-width: 600px)': {
+                imagedSection: 'https://vrin.co.kr/assets/home_A-1_mob-742b0262.png',
+            },
+            '(max-width: 768px)': {
+                imagedSection: 'https://vrin.co.kr/assets/home_A-1_tablet-00240f72.png',
+            },
+            '(max-width: 1024px)': {
+                imagedSection: 'https://vrin.co.kr/assets/home_A-1_laptop-f5526bf8.png',
+            },
+            '(min-width: 1025px)': {
+                imagedSection: 'https://vrin.co.kr/assets/home_A-1_PC-24bf28eb.png',
+            },
+        }),
+        []
+    )
+    const [media, setMedia] = useState(getValueAccordingToMedia(mediaPair))
 
     const slideshowDataset = [
         createSlideshowDatasetItem(t('section[6].slideshow[0]'), '', ''),
@@ -37,6 +56,8 @@ function App() {
         function onResize() {
             if (window.matchMedia('(max-width: 600px)').matches) setHeaderMode(HEADER_MODE.Mobile)
             else onScroll()
+
+            setMedia(getValueAccordingToMedia(mediaPair))
         }
 
         window.addEventListener('resize', onResize)
@@ -48,14 +69,14 @@ function App() {
             window.removeEventListener('resize', onResize)
             document.removeEventListener('scroll', onResize)
         }
-    }, [imagedSection.current])
+    }, [imagedSection, mediaPair])
 
     return (
         <>
             <Header mode={headerMode} />
             {/* <Header mode={HEADER_MODE.Other} /> */}
             <ImagedSection
-                src=''
+                src={media.imagedSection}
                 referer={imagedSection}>
                 {/* TODO: add source */}
                 <h1>{lf2br(t('section[0].head'))}</h1>
