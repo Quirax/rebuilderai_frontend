@@ -15,14 +15,14 @@ export const createDropdownMenuItem = (label, isDefault, value) => ({ label, isD
  * A node used to show dropdown menu
  * @param items An array of dropdown menu item. You can create the item with `createDropdownMenuItem`.
  * @param onSelect A callback that would be called when user selected the item. It must have one parameter of a value of the item.
+ * @param simplified A flag that indicates whether it have to be shown as simplified format
  */
-export function DropdownMenu({ items, onSelect }) {
+export function DropdownMenu({ items, onSelect, simplified }) {
     const [selected, setSelected] = useState(-1)
     const [dropdown, setDropdown] = useState(false)
 
     // Initialize selected state: if there is a default item, select the item; otherwise, select the first item.
     useEffect(() => {
-        console.log(selected)
         if (selected > -1) return
 
         let defaultSelected = 0
@@ -39,11 +39,45 @@ export function DropdownMenu({ items, onSelect }) {
 
     // When the menu item is clicked, select the item, call onSelect callback with the value of the item, and close the menu.
     const onClickItem = (value, idx) => {
-        console.log(idx)
         setSelected(idx)
         onSelect(value)
         setDropdown(false)
     }
+
+    const menuItems = items.flatMap((item, idx) => {
+        let classNames = ['item']
+        let check = <></>
+
+        // If this item is selected, add class name 'selected', and add check symbol.
+        if (idx === selected) {
+            classNames.push('selected')
+            if (!simplified) check = <span className='material-icons'>check</span>
+        }
+
+        let ret = [
+            <div
+                className={classNames.join(' ')}
+                key={idx * 2}
+                onClick={() => {
+                    onClickItem(item.value, idx)
+                }}>
+                <span>{item.label}</span>
+                {check}
+            </div>,
+        ]
+
+        if (simplified)
+            ret.push(
+                <div
+                    className='separator'
+                    key={idx * 2 + 1}
+                />
+            )
+
+        return ret
+    })
+
+    if (simplified) menuItems.pop()
 
     return (
         <div className='dropdown'>
@@ -54,28 +88,7 @@ export function DropdownMenu({ items, onSelect }) {
             <dialog
                 className='menu'
                 open={dropdown}>
-                {items.map((item, idx) => {
-                    let classNames = ['item']
-                    let check = <></>
-
-                    // If this item is selected, add class name 'selected', and add check symbol.
-                    if (idx === selected) {
-                        classNames.push('selected')
-                        check = <span className='material-icons'>check</span>
-                    }
-
-                    return (
-                        <div
-                            className={classNames.join(' ')}
-                            key={idx}
-                            onClick={() => {
-                                onClickItem(item.value, idx)
-                            }}>
-                            <span>{item.label}</span>
-                            {check}
-                        </div>
-                    )
-                })}
+                {menuItems}
             </dialog>
         </div>
     )

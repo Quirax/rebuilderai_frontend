@@ -8,9 +8,14 @@ import { DescribingSection } from './Components/DescribingSection'
 import { PercentageContainer, PercentageView } from './Components/PercentageView'
 import { MouseoverView } from './Components/MouseoverView'
 import { createSlideshowDatasetItem, SlideshowView } from './Components/SlideshowView'
+import { useCallback, useEffect, useState } from 'react'
 
 function App() {
     const { t } = useTranslation()
+
+    const [headerMode, setHeaderMode] = useState(
+        window.matchMedia('(max-width: 600px)').matches ? HEADER_MODE.Mobile : HEADER_MODE.OnTop
+    )
 
     const slideshowDataset = [
         createSlideshowDatasetItem(t('section[6].slideshow[0]'), '', ''),
@@ -18,9 +23,24 @@ function App() {
         createSlideshowDatasetItem(t('section[6].slideshow[2]'), '', ''),
     ]
 
+    useEffect(() => {
+        function onResize() {
+            if (window.matchMedia('(max-width: 600px)').matches) setHeaderMode(HEADER_MODE.Mobile)
+            else setHeaderMode(HEADER_MODE.OnTop)
+        }
+
+        window.addEventListener('resize', onResize)
+
+        onResize()
+
+        return () => {
+            window.removeEventListener('resize', onResize)
+        }
+    }, [])
+
     return (
         <>
-            <Header mode={HEADER_MODE.OnTop} />
+            <Header mode={headerMode} />
             {/* <Header mode={HEADER_MODE.Other} /> */}
             <ImagedSection src=''>
                 {/* TODO: add source */}

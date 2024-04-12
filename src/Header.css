@@ -1,22 +1,27 @@
 header {
     height: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 999;
     background: rgba(0, 0, 0, 0.5);
+    user-select: none;
 }
 
-header > div.left {
+header > div.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header > div.container > div.left {
     padding-left: 80px;
 }
 
-header > div.right {
+header > div.container > div.right {
     padding-right: 80px;
     gap: 60px;
     display: flex;
@@ -156,12 +161,16 @@ header div.dropdown dialog.menu div.item:hover {
     background-color: rgb(24, 28, 32);
 }
 
+header > dialog.menu {
+    display: none;
+}
+
 @media screen and (max-width: 1024px) {
-    header > div.left {
+    header > div.container > div.left {
         padding-left: 70px;
     }
 
-    header > div.right {
+    header > div.container > div.right {
         padding-right: 70px;
         gap: 32px;
         margin-left: 20px;
@@ -173,7 +182,7 @@ header div.dropdown dialog.menu div.item:hover {
 }
 
 @media screen and (max-width: 768px) {
-    header > div.right {
+    header > div.container > div.right {
         gap: 24px;
     }
 
@@ -184,4 +193,91 @@ header div.dropdown dialog.menu div.item:hover {
 }
 
 @media screen and (max-width: 600px) {
+    header {
+        height: 60px;
+    }
+
+    header > div.container > div.left {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header > div.container > div.left svg.glyph {
+        /* width: 18px;
+        height: 12px; */
+        fill: white;
+        cursor: pointer;
+    }
+
+    header > div.container > div.right {
+        padding-right: 20px;
+    }
+
+    header > div.container a.login {
+        width: fit-content;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0px;
+        cursor: pointer;
+    }
+
+    header > div.container svg.logo {
+        width: 46px;
+        fill: white;
+        margin-left: 16px;
+    }
+
+    header > div.menu {
+        position: static;
+        margin: 0;
+        border: none;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 15px 20px 32px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    header > div.menu > * {
+        font-size: 1.4rem;
+    }
+
+    header > div.menu div.dropdown div.current {
+        display: none;
+    }
+
+    header > div.menu div.dropdown dialog.menu {
+        display: flex;
+        background: transparent;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        position: static;
+    }
+
+    header > div.menu div.dropdown dialog.menu div.item {
+        display: block;
+        padding: 0;
+        cursor: pointer;
+        color: rgb(86, 93, 99);
+        background-color: transparent;
+    }
+
+    header > div.menu div.dropdown dialog.menu div.item.selected {
+        color: rgb(255, 255, 255);
+    }
+
+    header > div.menu div.dropdown dialog.menu div.separator {
+        display: flex;
+        width: 1px;
+        height: 18px;
+        background-color: rgb(111, 117, 123);
+        margin: 0px 8px;
+    }
 }
