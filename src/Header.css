@@ -127,7 +127,7 @@ header div.dropdown div.current svg.glyph {
 
 header div.dropdown dialog.menu[open] {
     position: absolute;
-    top: 40px;
+    top: 34px;
     left: 60%;
     transform: translate(-50%);
     display: flex;
@@ -155,6 +155,11 @@ header div.dropdown dialog.menu div.item {
 
 header div.dropdown dialog.menu div.item.selected {
     color: rgb(110, 133, 252);
+}
+
+header div.dropdown dialog.menu div.item.selected span.material-icons {
+    font-size: 2rem;
+    color: rgb(68, 74, 232);
 }
 
 header div.dropdown dialog.menu div.item:hover {
