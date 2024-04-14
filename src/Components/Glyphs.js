@@ -13,14 +13,15 @@ export const GLYPH_TYPE = Object.freeze({
     DirectionDown: 'direction-down',
     CircleArrow: 'circle-arrow',
     CircleClose: 'circle-close',
+    CircleLeft: 'circle-left',
+    CircleRight: 'circle-right',
 })
 
 /**
  * An utility function that returns glyph svg
  * @param type A `GLYPH_TYPE` value that indicates which glyph have to be shown.
- * @param style A style object
  */
-export function Glyph({ type, style }) {
+export function Glyph({ type, ...params }) {
     switch (type) {
         case GLYPH_TYPE.ArrowUp:
             return (
@@ -30,7 +31,7 @@ export function Glyph({ type, style }) {
                     aria-hidden='true'
                     viewBox='0 0 24 24'
                     data-testid='KeyboardArrowUpIcon'
-                    style={style}>
+                    {...params}>
                     <path d='M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z'></path>
                 </svg>
             )
@@ -42,7 +43,7 @@ export function Glyph({ type, style }) {
                     aria-hidden='true'
                     viewBox='0 0 24 24'
                     data-testid='KeyboardArrowDownIcon'
-                    style={style}>
+                    {...params}>
                     <path d='M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'></path>
                 </svg>
             )
@@ -54,7 +55,7 @@ export function Glyph({ type, style }) {
                     height='12'
                     viewBox='0 0 18 12'
                     xmlns='http://www.w3.org/2000/svg'
-                    style={style}>
+                    {...params}>
                     <path d='M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z'></path>
                 </svg>
             )
@@ -65,9 +66,10 @@ export function Glyph({ type, style }) {
                     width='24'
                     height='24'
                     viewBox='0 0 24 24'
+                    {...params}
                     style={{
                         marginRight: -6,
-                        ...style,
+                        ...params.style,
                     }}
                     xmlns='http://www.w3.org/2000/svg'>
                     <g clipPath='url(#clip0_2786_9881)'>
@@ -90,7 +92,7 @@ export function Glyph({ type, style }) {
                     width='25'
                     height='24'
                     viewBox='0 0 25 24'
-                    style={style}>
+                    {...params}>
                     <circle
                         cx='12.5'
                         cy='12'
@@ -101,7 +103,7 @@ export function Glyph({ type, style }) {
             return (
                 <svg
                     className='glyph'
-                    style={style}
+                    {...params}
                     xmlns='http://www.w3.org/2000/svg'
                     width='25'
                     height='24'
@@ -113,7 +115,7 @@ export function Glyph({ type, style }) {
             return (
                 <svg
                     className='glyph'
-                    style={style}
+                    {...params}
                     xmlns='http://www.w3.org/2000/svg'
                     width='33'
                     height='32'
@@ -125,7 +127,7 @@ export function Glyph({ type, style }) {
             return (
                 <svg
                     className='glyph'
-                    style={style}
+                    {...params}
                     xmlns='http://www.w3.org/2000/svg'
                     width='25'
                     height='24'
@@ -137,7 +139,7 @@ export function Glyph({ type, style }) {
             return (
                 <svg
                     className='glyph'
-                    style={style}
+                    {...params}
                     xmlns='http://www.w3.org/2000/svg'
                     width='57'
                     height='56'
@@ -149,7 +151,7 @@ export function Glyph({ type, style }) {
             return (
                 <svg
                     className='glyph'
-                    style={style}
+                    {...params}
                     width='56'
                     height='56'
                     viewBox='0 0 56 56'
@@ -169,7 +171,7 @@ export function Glyph({ type, style }) {
             return (
                 <svg
                     className='glyph'
-                    style={style}
+                    {...params}
                     width='36'
                     height='35'
                     viewBox='0 0 36 35'
@@ -186,6 +188,49 @@ export function Glyph({ type, style }) {
                             strokeWidth='0.857143'
                             fill='none'></path>
                     </g>
+                </svg>
+            )
+        case GLYPH_TYPE.CircleLeft:
+            return (
+                <svg
+                    className='glyph'
+                    width='36'
+                    height='36'
+                    viewBox='0 0 36 36'
+                    {...params}
+                    xmlns='http://www.w3.org/2000/svg'>
+                    <circle
+                        opacity='0.8'
+                        cx='18'
+                        cy='18'
+                        r='18'></circle>
+                    <path
+                        d='M20.7 11.7002L14.4 18.0002L20.7 24.3002'
+                        fill='none'
+                        strokeWidth='2'
+                        strokeLinecap='round'></path>
+                </svg>
+            )
+        case GLYPH_TYPE.CircleRight:
+            return (
+                <svg
+                    className='glyph'
+                    width='36'
+                    height='36'
+                    viewBox='0 0 36 36'
+                    {...params}
+                    xmlns='http://www.w3.org/2000/svg'>
+                    <circle
+                        opacity='0.8'
+                        cx='18'
+                        cy='18'
+                        r='18'
+                        transform='matrix(-1 0 0 1 36 0)'></circle>
+                    <path
+                        d='M15.3 11.7002L21.6 18.0002L15.3 24.3002'
+                        fill='none'
+                        strokeWidth='2'
+                        strokeLinecap='round'></path>
                 </svg>
             )
         default:

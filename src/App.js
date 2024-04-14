@@ -63,6 +63,47 @@ function App() {
                     },
                     'https://vrin.co.kr/assets/home_C-2_mob_ko-5056a825.png',
                 ],
+                slideshowSection: {
+                    wrapper: 'https://vrin.co.kr/assets/home_D-1_Laptop-1ca25de5.png',
+                    dataset: [
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[0]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_1_mob-77f1fcc7.png',
+                            '',
+                            'https://www.instagram.com/p/Ckze-2mgevQ'
+                        ),
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[1]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_2_mob-3a026f65.png',
+                            '',
+                            'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
+                        ),
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[2]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_3_mob-28ebdb88.png',
+                            '',
+                            'https://www.instagram.com/p/Ciw4xWSAhWU'
+                        ),
+                    ],
+                },
             },
             '(max-width: 768px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_tablet-00240f72.png',
@@ -114,6 +155,47 @@ function App() {
                     },
                     'https://vrin.co.kr/assets/home_C-2_tablet_ko-c30c77d3.png',
                 ],
+                slideshowSection: {
+                    wrapper: 'https://vrin.co.kr/assets/home_D-1_Laptop-1ca25de5.png',
+                    dataset: [
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[0]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_1_tablet-3d999a05.png',
+                            '',
+                            'https://www.instagram.com/p/Ckze-2mgevQ'
+                        ),
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[1]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_2_tablet-862ac944.png',
+                            '',
+                            'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
+                        ),
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[2]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_3_tablet-c70ea0d9.png',
+                            '',
+                            'https://www.instagram.com/p/Ciw4xWSAhWU'
+                        ),
+                    ],
+                },
             },
             '(max-width: 1024px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_laptop-f5526bf8.png',
@@ -165,6 +247,47 @@ function App() {
                     },
                     'https://vrin.co.kr/assets/home_C-2_laptop_ko-d5aa4736.png',
                 ],
+                slideshowSection: {
+                    wrapper: 'https://vrin.co.kr/assets/home_D-1_Laptop-1ca25de5.png',
+                    dataset: [
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[0]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_1_laptop-4f6630bd.png',
+                            'https://vrin.co.kr/assets/showroom_1-87aa7ee5.mp4',
+                            'https://www.instagram.com/p/Ckze-2mgevQ'
+                        ),
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[1]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_2_laptop-f7569b5f.png',
+                            'https://vrin.co.kr/assets/showroom_2-fef2efc1.mp4',
+                            'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
+                        ),
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[2]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_3_laptop-4ad7dc49.png',
+                            'https://vrin.co.kr/assets/showroom_3-6da92c3a.mp4',
+                            'https://www.instagram.com/p/Ciw4xWSAhWU'
+                        ),
+                    ],
+                },
             },
             '(min-width: 1025px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_PC-24bf28eb.png',
@@ -216,17 +339,52 @@ function App() {
                     },
                     'https://vrin.co.kr/assets/home_C-2_PC_ko-5168634f.png',
                 ],
+                slideshowSection: {
+                    wrapper: 'https://vrin.co.kr/assets/home_D-1_PC-0b362984.png',
+                    dataset: [
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[0]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_1_PC-6a00eedf.png',
+                            'https://vrin.co.kr/assets/showroom_1-87aa7ee5.mp4',
+                            'https://www.instagram.com/p/Ckze-2mgevQ'
+                        ),
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[1]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_2_PC-774a2af5.png',
+                            'https://vrin.co.kr/assets/showroom_2-fef2efc1.mp4',
+                            'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
+                        ),
+                        createSlideshowDatasetItem(
+                            <>
+                                {t('section[6].slideshow[2]')}
+                                <img
+                                    alt=''
+                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                />
+                            </>,
+                            'https://vrin.co.kr/assets/carousel_thumbnail_3_PC-471f312e.png',
+                            'https://vrin.co.kr/assets/showroom_3-6da92c3a.mp4',
+                            'https://www.instagram.com/p/Ciw4xWSAhWU'
+                        ),
+                    ],
+                },
             },
         }),
         [t]
     )
     const [media, setMedia] = useState(getValueAccordingToMedia(mediaPair))
-
-    const slideshowDataset = [
-        createSlideshowDatasetItem(t('section[6].slideshow[0]'), '', ''),
-        createSlideshowDatasetItem(t('section[6].slideshow[1]'), '', ''),
-        createSlideshowDatasetItem(t('section[6].slideshow[2]'), '', ''),
-    ]
 
     const bagImages = [
         'https://vrin.co.kr/assets/home_bag_1-016e6c5c.png',
@@ -410,7 +568,12 @@ function App() {
                 <h2>{t('section[6].subtitle')}</h2>
                 <h1>{lf2br(t('section[6].title'))}</h1>
                 <p>{lf2br(t('section[6].body'))}</p>
-                <SlideshowView dataset={slideshowDataset} />
+                <img
+                    className='slideshow-wrapper'
+                    src={media.slideshowSection.wrapper}
+                    alt=''
+                />
+                <SlideshowView dataset={media.slideshowSection.dataset} />
             </DescribingSection>
             <section className='start_now'>
                 <p>{t('section[7]')}</p>
