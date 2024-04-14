@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import './App.css'
 import Header, { HEADER_MODE } from './Header'
 import { ImagedSection } from './Components/ImagedSection'
 import { getValueAccordingToMedia, lf2br } from './util'
@@ -10,6 +9,9 @@ import { MouseoverView } from './Components/MouseoverView'
 import { createSlideshowDatasetItem, SlideshowView } from './Components/SlideshowView'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { GetStartedButton } from './Components/GetStartedButton'
+import { Glyph, GLYPH_TYPE } from './Components/Glyphs'
+
+import './App.css'
 
 function App() {
     const { t } = useTranslation()
@@ -22,15 +24,35 @@ function App() {
         () => ({
             '(max-width: 600px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_mob-742b0262.png',
+                videoedSection: [
+                    'https://vrin.co.kr/assets/home_content_1_mob-af3e7c76.mp4',
+                    'https://vrin.co.kr/assets/home_content_2_mob-2a21d63f.mp4',
+                    'https://vrin.co.kr/assets/home_content_3_mob-a49c026f.mp4',
+                ],
             },
             '(max-width: 768px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_tablet-00240f72.png',
+                videoedSection: [
+                    'https://vrin.co.kr/assets/home_content_1_tablet-372d0a93.mp4',
+                    'https://vrin.co.kr/assets/home_content_2_tablet-8832672b.mp4',
+                    'https://vrin.co.kr/assets/home_content_3_tablet-db992b6c.mp4',
+                ],
             },
             '(max-width: 1024px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_laptop-f5526bf8.png',
+                videoedSection: [
+                    'https://vrin.co.kr/assets/home_content_1_PC-3cb3a75d.mp4',
+                    'https://vrin.co.kr/assets/home_content_2_PC-c0a5dbbe.mp4',
+                    'https://vrin.co.kr/assets/home_content_3_PC-706ebb88.mp4',
+                ],
             },
             '(min-width: 1025px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_PC-24bf28eb.png',
+                videoedSection: [
+                    'https://vrin.co.kr/assets/home_content_1_PC-3cb3a75d.mp4',
+                    'https://vrin.co.kr/assets/home_content_2_PC-c0a5dbbe.mp4',
+                    'https://vrin.co.kr/assets/home_content_3_PC-706ebb88.mp4',
+                ],
             },
         }),
         []
@@ -85,23 +107,41 @@ function App() {
                 <GetStartedButton />
             </ImagedSection>
             <VideoedSection
-                src=''
-                indicators={['first', 'null', 'null']}>
-                {/* TODO: add source */}
+                src={media.videoedSection[0]}
+                indicators={[
+                    <Glyph
+                        type={GLYPH_TYPE.Camera}
+                        style={{ fill: '#5d6cfa' }}
+                    />,
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                ]}>
                 <h1>{lf2br(t('section[1].head'))}</h1>
                 <p>{lf2br(t('section[1].body'))}</p>
             </VideoedSection>
             <VideoedSection
-                src=''
-                indicators={['null', 'second', 'null']}>
-                {/* TODO: add source */}
+                src={media.videoedSection[1]}
+                indicators={[
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                    <Glyph
+                        type={GLYPH_TYPE.BoxInBox}
+                        style={{ fill: '#5d6cfa' }}
+                    />,
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                ]}>
                 <h1>{lf2br(t('section[2].head'))}</h1>
                 <p>{lf2br(t('section[2].body'))}</p>
             </VideoedSection>
             <VideoedSection
-                src=''
-                indicators={['null', 'null', 'third']}>
-                {/* TODO: add source */}
+                src={media.videoedSection[2]}
+                indicators={[
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                    <Glyph
+                        type={GLYPH_TYPE.Twinkle}
+                        style={{ fill: '#5d6cfa' }}
+                    />,
+                ]}>
                 <h1>{lf2br(t('section[3].head'))}</h1>
                 <p>{lf2br(t('section[3].body'))}</p>
             </VideoedSection>

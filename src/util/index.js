@@ -13,7 +13,6 @@ export function lf2br(str) {
  */
 export function getValueAccordingToMedia(mediaValuePair) {
     for (let key in mediaValuePair) {
-        console.log(key, window.matchMedia(key).matches)
         if (window.matchMedia(key).matches) return mediaValuePair[key]
     }
 }

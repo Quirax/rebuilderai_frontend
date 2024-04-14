@@ -1,0 +1,22 @@
+section.videoed {
+    position: relative;
+}
+
+section.videoed div.background {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    bottom: unset;
+}
+
+section.videoed div.background video {
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+section.videoed div.contents {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
