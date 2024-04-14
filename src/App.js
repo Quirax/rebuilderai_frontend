@@ -575,10 +575,15 @@ function App() {
                 />
                 <SlideshowView dataset={media.slideshowSection.dataset} />
             </DescribingSection>
-            <section className='start_now'>
-                <p>{t('section[7]')}</p>
-                <button>{t('getStarted')}</button>
+            <section className='start-now'>
+                <div>
+                    <p>{t('section[7]')}</p>
+                    <GetStartedButton />
+                </div>
             </section>
+            <div className='start-now'>
+                <GetStartedButton />
+            </div>
         </>
     )
 }
