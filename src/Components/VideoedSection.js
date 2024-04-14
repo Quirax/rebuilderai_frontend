@@ -54,11 +54,11 @@ function VideoedSection({ children, src, indicators }) {
                 />
             </div>
             <div className='contents'>
-                <ul className='left'>
-                    {indicators.map((indicator, idx) => (
-                        <li key={idx}>{indicator}</li>
+                <div className='left'>
+                    {indicators.map((indicator, key) => (
+                        <div key={key}>{indicator}</div>
                     ))}
-                </ul>
+                </div>
                 <div className='right'>{children}</div>
             </div>
         </section>

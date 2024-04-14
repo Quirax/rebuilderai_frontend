@@ -10,6 +10,7 @@ import { MouseoverView } from './Components/MouseoverView'
 import { createSlideshowDatasetItem, SlideshowView } from './Components/SlideshowView'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { GetStartedButton } from './Components/GetStartedButton'
+import { Glyph, GLYPH_TYPE } from './Components/Glyphs'
 
 function App() {
     const { t } = useTranslation()
@@ -106,22 +107,40 @@ function App() {
             </ImagedSection>
             <VideoedSection
                 src={media.videoedSection[0]}
-                indicators={['first', 'null', 'null']}>
-                {/* TODO: add source */}
+                indicators={[
+                    <Glyph
+                        type={GLYPH_TYPE.Camera}
+                        style={{ fill: '#5d6cfa' }}
+                    />,
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                ]}>
                 <h1>{lf2br(t('section[1].head'))}</h1>
                 <p>{lf2br(t('section[1].body'))}</p>
             </VideoedSection>
             <VideoedSection
                 src={media.videoedSection[1]}
-                indicators={['null', 'second', 'null']}>
-                {/* TODO: add source */}
+                indicators={[
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                    <Glyph
+                        type={GLYPH_TYPE.BoxInBox}
+                        style={{ fill: '#5d6cfa' }}
+                    />,
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                ]}>
                 <h1>{lf2br(t('section[2].head'))}</h1>
                 <p>{lf2br(t('section[2].body'))}</p>
             </VideoedSection>
             <VideoedSection
                 src={media.videoedSection[2]}
-                indicators={['null', 'null', 'third']}>
-                {/* TODO: add source */}
+                indicators={[
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                    <Glyph type={GLYPH_TYPE.Dot} />,
+                    <Glyph
+                        type={GLYPH_TYPE.Twinkle}
+                        style={{ fill: '#5d6cfa' }}
+                    />,
+                ]}>
                 <h1>{lf2br(t('section[3].head'))}</h1>
                 <p>{lf2br(t('section[3].body'))}</p>
             </VideoedSection>

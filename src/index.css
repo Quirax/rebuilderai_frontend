@@ -27,6 +27,11 @@ code {
     background-color: black; /* TODO: set valid color */
 }
 
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 *:hover {
     outline: 0;
 }
