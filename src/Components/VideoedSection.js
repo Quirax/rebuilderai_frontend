@@ -12,9 +12,11 @@ export function VideoedSection({ children, src, indicators }) {
     function decideStyle() {
         if (!ref.current) return { position: 'absolute', top: 0, bottom: 'unset' }
 
-        if (window.scrollY + document.documentElement.clientHeight > ref.current.offsetTop + ref.current.offsetHeight)
+        let boundingClientRect = ref.current.getBoundingClientRect()
+
+        if (boundingClientRect.top + boundingClientRect.height < document.documentElement.clientHeight)
             return { position: 'absolute', top: 'unset', bottom: -2 }
-        else if (window.scrollY >= ref.current.offsetTop) return { position: 'fixed', top: 0, bottom: 'unset' }
+        else if (boundingClientRect.top <= 0) return { position: 'fixed', top: 0, bottom: 'unset' }
         else return { position: 'absolute', top: 0, bottom: 'unset' }
     }
 
@@ -23,7 +25,6 @@ export function VideoedSection({ children, src, indicators }) {
     useEffect(() => {
         function onScroll() {
             if (!ref.current) return
-
             setStyle(decideStyle())
         }
 

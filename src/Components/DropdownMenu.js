@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Glyph, GLYPH_TYPE } from './Glyphs'
 import './DropdownMenu.css'
 
@@ -33,9 +33,9 @@ export function DropdownMenu({ items, onSelect, simplified }) {
     }, [items, selected])
 
     // When the current label is clicked, toggle dropdown menu
-    const onClickCurrent = useCallback(() => {
+    const onClickCurrent = () => {
         setDropdown((d) => !d)
-    }, [])
+    }
 
     // When the menu item is clicked, select the item, call onSelect callback with the value of the item, and close the menu.
     const onClickItem = (value, idx) => {

@@ -17,10 +17,6 @@ import { ImageSwapper } from './Components/ImageSwapper'
 function App() {
     const { t } = useTranslation()
 
-    const [headerMode, setHeaderMode] = useState(
-        window.matchMedia('(max-width: 600px)').matches ? HEADER_MODE.Mobile : HEADER_MODE.OnTop
-    )
-
     const mediaPair = useMemo(
         () => ({
             '(max-width: 600px)': {
@@ -400,17 +396,20 @@ function App() {
     ]
 
     const imagedSection = useRef()
-
     const startNowSection = useRef()
 
+    const [headerMode, setHeaderMode] = useState(
+        window.matchMedia('(max-width: 600px)').matches ? HEADER_MODE.Mobile : HEADER_MODE.OnTop
+    )
     const [showStartNowFloat, setShowStartNowFloat] = useState(true)
 
     useEffect(() => {
         function onScrollImageSection() {
             if (!imagedSection.current) return
 
-            if (window.scrollY >= imagedSection.current.clientTop + imagedSection.current.offsetHeight)
-                setHeaderMode(HEADER_MODE.Other)
+            let boundingClientRect = imagedSection.current.getBoundingClientRect()
+
+            if (boundingClientRect.top + boundingClientRect.height < 0) setHeaderMode(HEADER_MODE.Other)
             else setHeaderMode(HEADER_MODE.OnTop)
         }
 
