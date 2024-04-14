@@ -401,6 +401,10 @@ function App() {
 
     const imagedSection = useRef()
 
+    const startNowSection = useRef()
+
+    const [showStartNowFloat, setShowStartNowFloat] = useState(true)
+
     useEffect(() => {
         function onScrollImageSection() {
             if (!imagedSection.current) return
@@ -410,9 +414,22 @@ function App() {
             else setHeaderMode(HEADER_MODE.OnTop)
         }
 
+        function onScrollStartNowFloat() {
+            if (!startNowSection.current) return
+
+            if (startNowSection.current.getBoundingClientRect().top < document.documentElement.clientHeight)
+                setShowStartNowFloat(false)
+            else setShowStartNowFloat(true)
+        }
+
         function onResize() {
-            if (window.matchMedia('(max-width: 600px)').matches) setHeaderMode(HEADER_MODE.Mobile)
-            else onScrollImageSection()
+            if (window.matchMedia('(max-width: 600px)').matches) {
+                setHeaderMode(HEADER_MODE.Mobile)
+                onScrollStartNowFloat()
+            } else {
+                onScrollImageSection()
+                setShowStartNowFloat(false)
+            }
 
             setMedia(getValueAccordingToMedia(mediaPair))
         }
@@ -426,7 +443,7 @@ function App() {
             window.removeEventListener('resize', onResize)
             document.removeEventListener('scroll', onResize)
         }
-    }, [imagedSection, mediaPair])
+    }, [imagedSection, mediaPair, startNowSection])
 
     return (
         <>
@@ -575,13 +592,17 @@ function App() {
                 />
                 <SlideshowView dataset={media.slideshowSection.dataset} />
             </DescribingSection>
-            <section className='start-now'>
+            <section
+                className='start-now'
+                ref={startNowSection}>
                 <div>
                     <p>{t('section[7]')}</p>
                     <GetStartedButton />
                 </div>
             </section>
-            <div className='start-now'>
+            <div
+                className='start-now'
+                style={{ display: showStartNowFloat ? 'flex' : 'none' }}>
                 <GetStartedButton />
             </div>
         </>
