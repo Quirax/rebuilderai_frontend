@@ -1,3 +1,5 @@
+import './DescribingSection.css'
+
 /**
  * A simple section node describing contents defined as children
  */

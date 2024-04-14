@@ -24,7 +24,7 @@ code {
         Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, 'Apple Color Emoji', 'Segoe UI Emoji',
         Segoe UI Symbol, sans-serif;
     color: rgb(255, 255, 255);
-    background-color: black; /* TODO: set valid color */
+    background-color: rgb(5, 7, 14);
 }
 
 * {
