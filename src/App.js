@@ -51,6 +51,16 @@ function App() {
                         ),
                     },
                 ],
+                mouseoverSection: [
+                    {
+                        mouseleave: 'https://vrin.co.kr/assets/home_C-1_mob_ko-ca6a7c93.png',
+                        mouseover: {
+                            text: lf2br(t('section[5].mouseover[0].mouseover_shrink')),
+                            container: 'https://vrin.co.kr/assets/home_C-3_mob-3b1fdee5.png',
+                            video: 'https://vrin.co.kr/assets/home_2_PC-f15f3e50.mp4',
+                        },
+                    },
+                ],
             },
             '(max-width: 768px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_tablet-00240f72.png',
@@ -89,6 +99,16 @@ function App() {
                                 <Glyph type={GLYPH_TYPE.DirectionDown} />
                             </>
                         ),
+                    },
+                ],
+                mouseoverSection: [
+                    {
+                        mouseleave: 'https://vrin.co.kr/assets/home_C-1_tablet_ko-3258fbfe.png',
+                        mouseover: {
+                            text: lf2br(t('section[5].mouseover[0].mouseover')),
+                            container: 'https://vrin.co.kr/assets/home_C-3_tablet-e3467c23.png',
+                            video: 'https://vrin.co.kr/assets/home_2_PC-f15f3e50.mp4',
+                        },
                     },
                 ],
             },
@@ -131,6 +151,16 @@ function App() {
                         ),
                     },
                 ],
+                mouseoverSection: [
+                    {
+                        mouseleave: 'https://vrin.co.kr/assets/home_C-1_laptop_ko-0f813a7a.png',
+                        mouseover: {
+                            text: lf2br(t('section[5].mouseover[0].mouseover')),
+                            container: 'https://vrin.co.kr/assets/home_C-3_PC-52386fbc.png',
+                            video: 'https://vrin.co.kr/assets/home_2_PC-f15f3e50.mp4',
+                        },
+                    },
+                ],
             },
             '(min-width: 1025px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_PC-24bf28eb.png',
@@ -169,6 +199,16 @@ function App() {
                                 <Glyph type={GLYPH_TYPE.DirectionDown} />
                             </>
                         ),
+                    },
+                ],
+                mouseoverSection: [
+                    {
+                        mouseleave: 'https://vrin.co.kr/assets/home_C-1_PC_ko-093e56a1.png',
+                        mouseover: {
+                            text: lf2br(t('section[5].mouseover[0].mouseover')),
+                            container: 'https://vrin.co.kr/assets/home_C-3_PC-52386fbc.png',
+                            video: 'https://vrin.co.kr/assets/home_2_PC-f15f3e50.mp4',
+                        },
                     },
                 ],
             },
@@ -286,23 +326,40 @@ function App() {
             <DescribingSection>
                 <h2>{t('section[5].subtitle')}</h2>
                 <h1>{lf2br(t('section[5].title'))}</h1>
-                <div class='mouseover-section'>
+                <div className='mouseover-section'>
                     <MouseoverView
                         mouseleave={
                             <>
-                                <div>{lf2br(t('section[5].mouseover[0].mouseleave'))}</div>
+                                <div>
+                                    {lf2br(t('section[5].mouseover[0].mouseleave'))}
+                                    <Glyph type={GLYPH_TYPE.CircleArrow} />
+                                </div>
                                 <img
-                                    src=''
+                                    id='section-5-1-mouseleave'
+                                    src={media.mouseoverSection[0].mouseleave}
                                     alt=''
                                 />
                             </>
                         }
                         mouseover={
                             <>
-                                <div>{lf2br(t('section[5].mouseover[0].mouseover'))}</div>
+                                <div>
+                                    {media.mouseoverSection[0].mouseover.text}
+                                    <Glyph type={GLYPH_TYPE.CircleClose} />
+                                </div>
                                 <img
-                                    src=''
+                                    id='section-5-1-mouseover-container'
+                                    src={media.mouseoverSection[0].mouseover.container}
                                     alt=''
+                                />
+                                <video
+                                    id='section-5-1-mouseover-video'
+                                    src={media.mouseoverSection[0].mouseover.video}
+                                    alt=''
+                                    loop
+                                    playsInline
+                                    autoPlay
+                                    muted
                                 />
                             </>
                         }
@@ -310,7 +367,10 @@ function App() {
                     <MouseoverView
                         mouseleave={
                             <>
-                                <div>{lf2br(t('section[5].mouseover[1].mouseleave'))}</div>
+                                <div>
+                                    {lf2br(t('section[5].mouseover[1].mouseleave'))}
+                                    <Glyph type={GLYPH_TYPE.CircleArrow} />
+                                </div>
                                 <img
                                     src=''
                                     alt=''
@@ -319,7 +379,10 @@ function App() {
                         }
                         mouseover={
                             <>
-                                <div>{lf2br(t('section[5].mouseover[1].mouseover'))}</div>
+                                <div>
+                                    {lf2br(t('section[5].mouseover[1].mouseover'))}
+                                    <Glyph type={GLYPH_TYPE.CircleClose} />
+                                </div>
                                 <img
                                     src=''
                                     alt=''
