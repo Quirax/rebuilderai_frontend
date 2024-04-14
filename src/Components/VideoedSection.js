@@ -6,7 +6,7 @@ import './VideoedSection.css'
  * @param src an URL or path of the background image
  * @param indicators an array of image sources to indicate current section
  */
-function VideoedSection({ children, src, indicators }) {
+export function VideoedSection({ children, src, indicators }) {
     const ref = useRef()
 
     function decideStyle() {
@@ -65,5 +65,3 @@ function VideoedSection({ children, src, indicators }) {
         </section>
     )
 }
-
-export { VideoedSection }

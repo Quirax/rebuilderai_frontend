@@ -5,7 +5,7 @@ import './ImagedSection.css'
  * @param src an URL or path of the background image
  * @param referer a reference of section node
  */
-const ImagedSection = ({ children, src, referer }) => (
+export const ImagedSection = ({ children, src, referer }) => (
     <section
         className='imaged'
         style={{
@@ -17,5 +17,3 @@ const ImagedSection = ({ children, src, referer }) => (
         </div>
     </section>
 )
-
-export { ImagedSection }
