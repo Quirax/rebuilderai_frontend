@@ -186,17 +186,17 @@ function App() {
     const imagedSection = useRef()
 
     useEffect(() => {
-        function onScroll() {
+        function onScrollImageSection() {
             if (!imagedSection.current) return
 
-            if (window.scrollY >= imagedSection.current.offsetTop + imagedSection.current.offsetHeight)
+            if (window.scrollY >= imagedSection.current.clientTop + imagedSection.current.offsetHeight)
                 setHeaderMode(HEADER_MODE.Other)
             else setHeaderMode(HEADER_MODE.OnTop)
         }
 
         function onResize() {
             if (window.matchMedia('(max-width: 600px)').matches) setHeaderMode(HEADER_MODE.Mobile)
-            else onScroll()
+            else onScrollImageSection()
 
             setMedia(getValueAccordingToMedia(mediaPair))
         }
@@ -270,6 +270,11 @@ function App() {
                 <PercentageContainer>
                     {media.percentageSection.map((viewData, idx) => (
                         <PercentageView
+                            style={{ opacity: 0 }}
+                            animatedStyle={{
+                                opacity: 0,
+                                animation: `1s ease-in-out ${idx * 0.5}s 1 normal forwards running easeinout`,
+                            }}
                             key={idx}
                             description={viewData.description}
                             base={viewData.base}>
