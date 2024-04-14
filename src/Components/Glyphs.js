@@ -11,6 +11,8 @@ export const GLYPH_TYPE = Object.freeze({
     BoxInBox: 'box-in-box',
     Twinkle: 'twinkle',
     DirectionDown: 'direction-down',
+    CircleArrow: 'circle-arrow',
+    CircleClose: 'circle-close',
 })
 
 /**
@@ -141,6 +143,49 @@ export function Glyph({ type, style }) {
                     height='56'
                     viewBox='0 0 57 56'>
                     <path d='M25.4672 7.0828L29.427 7.0828L29.427 40.7411L44.7713 25.3969L47.5761 28.2017L27.4471 48.3307L7.31817 28.2017L10.123 25.3969L25.4672 40.7411L25.4672 7.0828Z'></path>
+                </svg>
+            )
+        case GLYPH_TYPE.CircleArrow:
+            return (
+                <svg
+                    className='glyph'
+                    style={style}
+                    width='56'
+                    height='56'
+                    viewBox='0 0 56 56'
+                    xmlns='http://www.w3.org/2000/svg'>
+                    <g opacity='0.2'>
+                        <path d='M18.7208 37.5996L16.8008 35.6796L33.1208 19.3596H18.2408V16.6396H37.7608V36.1596H35.0408V21.2796L18.7208 37.5996Z'></path>
+                        <circle
+                            cx='28'
+                            cy='28'
+                            r='27.3333'
+                            fill='none'
+                            strokeWidth='1.33333'></circle>
+                    </g>
+                </svg>
+            )
+        case GLYPH_TYPE.CircleClose:
+            return (
+                <svg
+                    className='glyph'
+                    style={style}
+                    width='36'
+                    height='35'
+                    viewBox='0 0 36 35'
+                    xmlns='http://www.w3.org/2000/svg'>
+                    <g opacity='0.2'>
+                        <path
+                            d='M25 11L11 25'
+                            strokeWidth='1.3'></path>
+                        <path
+                            d='M11 11L25 25'
+                            strokeWidth='1.3'></path>
+                        <path
+                            d='M35.5714 17.5C35.5714 26.917 27.7159 34.5714 18 34.5714C8.28411 34.5714 0.428571 26.917 0.428571 17.5C0.428571 8.08301 8.28411 0.428571 18 0.428571C27.7159 0.428571 35.5714 8.08301 35.5714 17.5Z'
+                            strokeWidth='0.857143'
+                            fill='none'></path>
+                    </g>
                 </svg>
             )
         default:

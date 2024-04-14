@@ -230,6 +230,114 @@ div.percentage div.item div.base {
     line-height: 140%;
 }
 
+div.mouseover-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 64px;
+    gap: 24px;
+    width: 100%;
+}
+
+div.mouseover-section div.mouseover-view {
+    width: 50%;
+}
+
+div.mouseover-section div.mouseover-view div.mouseover,
+div.mouseover-section div.mouseover-view div.mouseleave {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    max-width: 588px;
+    height: 609px;
+    border-radius: 22px;
+    padding: 58px 64px;
+    cursor: pointer;
+}
+
+div.mouseover-section div.mouseover-view div.mouseleave div,
+div.mouseover-section div.mouseover-view div.mouseover div {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    line-height: 140%;
+    white-space: pre-wrap;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+div.mouseover-section div.mouseover-view div.mouseleave div svg,
+div.mouseover-section div.mouseover-view div.mouseover div svg {
+    fill: #f3eeff;
+    stroke: #f3eeff;
+    min-width: 56px;
+    width: 56px;
+    height: 56px;
+}
+
+div.mouseover-section div.mouseover-view div.mouseleave {
+    background: linear-gradient(221deg, rgba(255, 255, 255, 0.2) -0.09%, rgba(81, 30, 198, 0.14) 99.94%);
+}
+
+div.mouseover-section div.mouseover-view div.mouseleave div {
+    font-size: clamp(2.4rem, 2.2vw, 3.6rem);
+}
+
+img#section-5-1-mouseleave {
+    width: 106%;
+    position: absolute;
+    top: 35px;
+    right: -32px;
+    pointer-events: none;
+}
+
+img#section-5-2-mouseleave {
+    width: 86%;
+    position: absolute;
+    top: 165px;
+    right: 45px;
+    pointer-events: none;
+}
+
+div.mouseover-section div.mouseover-view div.mouseover {
+    background: linear-gradient(225deg, rgba(255, 255, 255, 0.5) 0%, rgba(81, 30, 198, 0.35) 100%);
+}
+
+div.mouseover-section div.mouseover-view div.mouseover div {
+    font-size: clamp(2rem, 1.5vw, 3.2rem);
+}
+
+div.mouseover-section div.mouseover-view div.mouseover div svg {
+    display: none;
+}
+
+img#section-5-1-mouseover-container {
+    width: 105%;
+    position: absolute;
+    top: 34px;
+    right: -31px;
+    pointer-events: none;
+}
+
+video#section-5-1-mouseover-video {
+    width: 40%;
+    position: absolute;
+    top: 220px;
+    right: 78px;
+    pointer-events: none;
+}
+
+img.swapped-image {
+    position: absolute;
+    top: 210px;
+    right: -30px;
+    pointer-events: none;
+    width: 100%;
+}
+
 @media screen and (max-width: 1280px) {
     section.videoed div.contents div.right h1 {
         font-size: 4rem;
@@ -237,6 +345,11 @@ div.percentage div.item div.base {
 
     section.videoed div.contents div.right p {
         font-size: 2.4rem;
+    }
+
+    video#section-5-1-mouseover-video {
+        top: 15vw;
+        right: 4.75vw;
     }
 }
 
@@ -326,6 +439,65 @@ div.percentage div.item div.base {
     div.percentage div.item div.base {
         font-size: 1rem;
     }
+
+    div.mouseover-section {
+        margin-top: 40px;
+        gap: 28px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover,
+    div.mouseover-section div.mouseover-view div.mouseleave {
+        max-width: 408px;
+        height: 420px;
+        border-radius: 16px;
+        padding: 40px 44px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseleave div {
+        font-size: 2.4rem;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover div {
+        font-size: 2rem;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseleave div svg,
+    div.mouseover-section div.mouseover-view div.mouseover div svg {
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    img#section-5-1-mouseleave {
+        width: 107%;
+        min-width: 415px;
+        top: 17px;
+        right: -20px;
+    }
+
+    img#section-5-2-mouseleave {
+        width: 85%;
+        min-width: 320px;
+        top: 115px;
+        right: 35px;
+    }
+
+    img#section-5-1-mouseover-container {
+        min-width: 415px;
+        top: 20px;
+        right: -18px;
+    }
+
+    video#section-5-1-mouseover-video {
+        min-width: 152px;
+        top: 16vw;
+        right: 59px;
+    }
+
+    img.swapped-image {
+        top: 188px;
+        right: -12px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -402,6 +574,79 @@ div.percentage div.item div.base {
 
     div.percentage div.item div.description {
         font-size: 1.6rem;
+    }
+
+    div.mouseover-section {
+        flex-direction: column;
+        margin-top: 103px;
+        gap: 149px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover,
+    div.mouseover-section div.mouseover-view div.mouseleave {
+        flex-direction: column;
+        max-width: 630px;
+        height: 250px;
+        border-radius: 22px;
+        padding: 48px 56px;
+    }
+
+    div.mouseover-section div.mouseover-view {
+        width: 100%;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover div,
+    div.mouseover-section div.mouseover-view div.mouseleave div {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseleave div {
+        font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover div {
+        font-size: clamp(1.6rem, 2.7vw, 2rem);
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseleave div svg,
+    div.mouseover-section div.mouseover-view div.mouseover div svg {
+        min-width: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    img#section-5-1-mouseleave {
+        width: 377px;
+        min-width: 377px;
+        top: -120px;
+        right: 5px;
+    }
+
+    img#section-5-2-mouseleave {
+        width: 326px;
+        min-width: 326px;
+        top: -52px;
+        right: 51px;
+    }
+
+    img#section-5-1-mouseover-container {
+        width: 380px;
+        min-width: 380px;
+        top: -120px;
+        right: 6px;
+    }
+
+    video#section-5-1-mouseover-video {
+        width: 157px;
+        top: -15px;
+        right: 68px;
+    }
+
+    img.swapped-image {
+        width: 350px;
+        top: 10px;
+        right: -40px;
     }
 }
 
@@ -521,6 +766,63 @@ div.percentage div.item div.base {
 
     div.percentage div.item div.base {
         font-size: 0.8rem;
+    }
+
+    div.mouseover-section {
+        margin-top: 24px;
+        gap: 110px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover,
+    div.mouseover-section div.mouseover-view div.mouseleave {
+        max-width: 560px;
+        padding: 28px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseleave div {
+        font-size: 1.6rem;
+    }
+
+    img#section-5-1-mouseleave {
+        width: 53%;
+        min-width: 295px;
+        top: -12px;
+        right: -14px;
+    }
+
+    img#section-5-2-mouseleave {
+        width: 43%;
+        min-width: 240px;
+        top: 22px;
+        right: 18px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover div {
+        font-size: 1.6rem;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover div svg {
+        display: block;
+    }
+
+    img#section-5-1-mouseover-container {
+        width: 40%;
+        min-width: 300px;
+        top: -15px;
+        right: -12px;
+    }
+
+    video#section-5-1-mouseover-video {
+        min-width: 120px;
+        width: 20%;
+        top: 70px;
+        right: 38px;
+    }
+
+    img.swapped-image {
+        width: 250px;
+        top: 111px;
+        right: -10px;
     }
 }
 
