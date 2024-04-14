@@ -503,6 +503,84 @@ div.slideshow-video-container div.slideshow-video div.slideshow-video-status div
     background: -webkit-linear-gradient(268.82deg, rgb(115, 55, 255) 12.24%, rgb(49, 69, 255) 98.89%);
 }
 
+section.start-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 260px;
+    min-height: 200px;
+    height: 16vw;
+    background: rgb(55, 55, 204);
+    flex-direction: column;
+}
+
+section.start-now > div {
+    display: flex;
+    flex-direction: column;
+}
+
+section.start-now p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+section.start-now button {
+    width: fit-content;
+    height: auto;
+    background: rgb(230, 232, 235);
+    border-radius: 6px;
+    padding: 16px 56px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 140%;
+    color: rgb(55, 55, 204);
+}
+
+section.start-now button:hover {
+    text-decoration: none;
+    background: rgb(255, 255, 255);
+}
+
+div.start-now {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 16px 0px;
+}
+
+div.start-now button {
+    width: calc(100% - 40px);
+    padding: 12px 20px;
+    border-radius: 4px;
+    background-color: rgb(55, 55, 204);
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+div.start-now button:hover {
+    text-decoration: none;
+    background-color: rgb(93, 108, 250);
+}
+
+div.start-now button:active {
+    background-color: rgb(0, 0, 150);
+}
+
 @media screen and (max-width: 1280px) {
     section.videoed div.contents div.right h1 {
         font-size: 4rem;
@@ -703,6 +781,14 @@ div.slideshow-video-container div.slideshow-video div.slideshow-video-status div
     div.slideshow-image-handle {
         left: calc(50px + 48px);
     }
+
+    section.start-now p {
+        font-size: 2.8rem;
+    }
+
+    section.start-now button {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -902,6 +988,15 @@ div.slideshow-video-container div.slideshow-video div.slideshow-video-status div
 
     div.slideshow-image-handle {
         display: none;
+    }
+
+    section.start-now p {
+        font-size: 2.4rem;
+    }
+
+    section.start-now button {
+        padding: 12px 40px;
+        font-size: 1.8rem;
     }
 }
 
@@ -1107,6 +1202,16 @@ div.slideshow-video-container div.slideshow-video div.slideshow-video-status div
         height: 24px;
         bottom: 16px;
         right: 16px;
+    }
+
+    section.start-now p {
+        font-size: 1.8rem;
+    }
+
+    section.start-now button {
+        border-radius: 4px;
+        padding: 10px 24px;
+        font-size: 1.4rem;
     }
 }
 
