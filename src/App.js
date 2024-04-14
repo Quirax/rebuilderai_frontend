@@ -409,8 +409,9 @@ function App() {
         function onScrollImageSection() {
             if (!imagedSection.current) return
 
-            if (window.scrollY >= imagedSection.current.clientTop + imagedSection.current.offsetHeight)
-                setHeaderMode(HEADER_MODE.Other)
+            let boundingClientRect = imagedSection.current.getBoundingClientRect()
+
+            if (boundingClientRect.top + boundingClientRect.height < 0) setHeaderMode(HEADER_MODE.Other)
             else setHeaderMode(HEADER_MODE.OnTop)
         }
 
