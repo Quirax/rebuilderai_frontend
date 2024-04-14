@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import './App.css'
 import Header, { HEADER_MODE } from './Header'
 import { ImagedSection } from './Components/ImagedSection'
 import { getValueAccordingToMedia, lf2br } from './util'
@@ -11,6 +10,8 @@ import { createSlideshowDatasetItem, SlideshowView } from './Components/Slidesho
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { GetStartedButton } from './Components/GetStartedButton'
 import { Glyph, GLYPH_TYPE } from './Components/Glyphs'
+
+import './App.css'
 
 function App() {
     const { t } = useTranslation()

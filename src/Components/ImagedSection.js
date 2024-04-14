@@ -1,3 +1,5 @@
+import './ImagedSection.css'
+
 /**
  * A section node describes contents defined as children, with a background image
  * @param src an URL or path of the background image

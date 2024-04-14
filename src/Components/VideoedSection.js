@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import './VideoedSection.css'
 
 /**
  * A section node describes contents defined as children, with a background video

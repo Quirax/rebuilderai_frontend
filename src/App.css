@@ -1,26 +1,15 @@
 section.imaged {
-    width: 100%;
-    height: 100vh;
     max-height: 970px;
-    white-space: pre-wrap;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 section.imaged div.container {
     max-width: 1300px;
     width: calc(100% - 180px);
-    position: relative;
 }
 
 section.imaged div.contents {
-    position: absolute;
     bottom: 120px;
-    left: 0px;
-    width: 100%;
+    top: unset;
 }
 
 section.imaged div.contents h1 {
@@ -92,18 +81,9 @@ section.imaged button.getStarted span {
 }
 
 section.videoed {
-    position: relative;
     width: 100%;
     height: 250vh;
     background-color: rgb(5, 7, 14);
-}
-
-section.videoed div.background {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 0px;
-    bottom: unset;
 }
 
 section.videoed div.background:after {
@@ -116,18 +96,10 @@ section.videoed div.background:after {
     background: linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.videoed div.background video {
-    min-height: 100vh;
-    object-fit: cover;
-}
-
 section.videoed div.contents {
-    position: absolute;
     top: 60%;
     left: 15vw;
     transform: translate(0px, -50%);
-    display: flex;
-    flex-direction: row;
 }
 
 section.videoed div.contents div.left {
