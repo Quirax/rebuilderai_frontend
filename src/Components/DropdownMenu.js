@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Glyph, GLYPH_TYPE } from './Glyphs'
 import './DropdownMenu.css'
 
