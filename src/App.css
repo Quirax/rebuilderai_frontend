@@ -230,6 +230,41 @@ div.percentage div.item div.base {
     line-height: 140%;
 }
 
+div.mouseover-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 64px;
+    gap: 24px;
+    width: 100%;
+}
+
+div.mouseover-section div.mouseover-view {
+    width: 50%;
+}
+
+div.mouseover-section div.mouseover-view div.mouseover,
+div.mouseover-section div.mouseover-view div.mouseleave {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    max-width: 588px;
+    height: 609px;
+    border-radius: 22px;
+    padding: 58px 64px;
+    cursor: pointer;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+div.mouseover-section div.mouseover-view div.mouseleave {
+    background: linear-gradient(221deg, rgba(255, 255, 255, 0.2) -0.09%, rgba(81, 30, 198, 0.14) 99.94%);
+}
+
+div.mouseover-section div.mouseover-view div.mouseover {
+    background: linear-gradient(225deg, rgba(255, 255, 255, 0.5) 0%, rgba(81, 30, 198, 0.35) 100%);
+}
+
 @media screen and (max-width: 1280px) {
     section.videoed div.contents div.right h1 {
         font-size: 4rem;
@@ -326,6 +361,19 @@ div.percentage div.item div.base {
     div.percentage div.item div.base {
         font-size: 1rem;
     }
+
+    div.mouseover-section {
+        margin-top: 40px;
+        gap: 28px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover,
+    div.mouseover-section div.mouseover-view div.mouseleave {
+        max-width: 408px;
+        height: 420px;
+        border-radius: 16px;
+        padding: 40px 44px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -402,6 +450,26 @@ div.percentage div.item div.base {
 
     div.percentage div.item div.description {
         font-size: 1.6rem;
+    }
+
+    div.mouseover-section {
+        flex-direction: column;
+        margin-top: 103px;
+        gap: 149px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover,
+    div.mouseover-section div.mouseover-view div.mouseleave {
+        flex-direction: column;
+        max-width: 630px;
+        height: 250px;
+        border-radius: 22px;
+        padding: 48px 56px;
+        gap: 28px;
+    }
+
+    div.mouseover-section div.mouseover-view {
+        width: 100%;
     }
 }
 
@@ -521,6 +589,17 @@ div.percentage div.item div.base {
 
     div.percentage div.item div.base {
         font-size: 0.8rem;
+    }
+
+    div.mouseover-section {
+        margin-top: 24px;
+        gap: 110px;
+    }
+
+    div.mouseover-section div.mouseover-view div.mouseover,
+    div.mouseover-section div.mouseover-view div.mouseleave {
+        max-width: 560px;
+        padding: 28px;
     }
 }
 

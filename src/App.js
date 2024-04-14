@@ -286,7 +286,7 @@ function App() {
             <DescribingSection>
                 <h2>{t('section[5].subtitle')}</h2>
                 <h1>{lf2br(t('section[5].title'))}</h1>
-                <div>
+                <div class='mouseover-section'>
                     <MouseoverView
                         mouseleave={
                             <>
