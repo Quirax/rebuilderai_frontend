@@ -30,7 +30,6 @@ export function PercentageView({ children, description, base, style, animatedSty
     useEffect(() => {
         function onScroll() {
             if (!ref.current) return
-
             if (ref.current.getBoundingClientRect().top < document.documentElement.clientHeight) setAnimate(true)
         }
 

@@ -28,11 +28,9 @@ export function MouseoverView({ mouseleave, mouseover }) {
         function onResize() {
             if (window.matchMedia('(max-width: 600px)').matches) {
                 if (!isMobile) setIsMouseover(false)
-
                 setIsMobile(true)
             } else {
                 if (isMobile) setIsMouseover(false)
-
                 setIsMobile(false)
             }
         }

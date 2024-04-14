@@ -25,7 +25,6 @@ export function VideoedSection({ children, src, indicators }) {
     useEffect(() => {
         function onScroll() {
             if (!ref.current) return
-
             setStyle(decideStyle())
         }
 
