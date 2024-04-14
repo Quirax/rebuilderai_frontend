@@ -21,7 +21,8 @@ export function ImageSwapper({ imageList }) {
             className='swapped-image'
             key={idx}
             src={src}
-            style={idx == selected ? { opacity: 1 } : { opacity: 0 }}
+            alt=''
+            style={idx === selected ? { opacity: 1 } : { opacity: 0 }}
         />
     ))
 }
