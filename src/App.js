@@ -259,7 +259,7 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_1_laptop-4f6630bd.png',
-                            '',
+                            'https://vrin.co.kr/assets/showroom_1-87aa7ee5.mp4',
                             'https://www.instagram.com/p/Ckze-2mgevQ'
                         ),
                         createSlideshowDatasetItem(
@@ -271,7 +271,7 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_2_laptop-f7569b5f.png',
-                            '',
+                            'https://vrin.co.kr/assets/showroom_2-fef2efc1.mp4',
                             'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
                         ),
                         createSlideshowDatasetItem(
@@ -283,7 +283,7 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_3_laptop-4ad7dc49.png',
-                            '',
+                            'https://vrin.co.kr/assets/showroom_3-6da92c3a.mp4',
                             'https://www.instagram.com/p/Ciw4xWSAhWU'
                         ),
                     ],
@@ -351,7 +351,7 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_1_PC-6a00eedf.png',
-                            '',
+                            'https://vrin.co.kr/assets/showroom_1-87aa7ee5.mp4',
                             'https://www.instagram.com/p/Ckze-2mgevQ'
                         ),
                         createSlideshowDatasetItem(
@@ -363,7 +363,7 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_2_PC-774a2af5.png',
-                            '',
+                            'https://vrin.co.kr/assets/showroom_2-fef2efc1.mp4',
                             'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
                         ),
                         createSlideshowDatasetItem(
@@ -375,7 +375,7 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_3_PC-471f312e.png',
-                            '',
+                            'https://vrin.co.kr/assets/showroom_3-6da92c3a.mp4',
                             'https://www.instagram.com/p/Ciw4xWSAhWU'
                         ),
                     ],

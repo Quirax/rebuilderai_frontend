@@ -25,18 +25,26 @@ export const createSlideshowDatasetItem = (description, image_src, video_src, li
  * @param dataset a dataset to show.
  */
 export function SlideshowView({ dataset }) {
-    const slideshowRef = useRef()
+    const imageSlideshowRef = useRef()
+    const videoSlideshowRef = useRef()
     const [isMobile, setIsMobile] = useState(!!window.matchMedia('(max-width: 768px)').matches)
+    const [progress, setProgress] = useState(-100 + 100 / (dataset.length - 1))
+    const [showVideo, setShowVideo] = useState(false)
 
-    const onClick = useCallback(
-        (idx) => {
-            console.log(isMobile)
-            if (isMobile) {
-                window.open(dataset[idx].link_url, '_blank')
-            }
-        },
-        [isMobile, dataset]
-    )
+    const onClick = (idx) => {
+        console.log(isMobile)
+        if (isMobile) {
+            window.open(dataset[idx].link_url, '_blank')
+        } else {
+            videoSlideshowRef.current?.slickGoTo(idx, true)
+            afterSlideVideo(idx)
+            setShowVideo(true)
+        }
+    }
+
+    const afterSlideVideo = (index) => {
+        setProgress(-100 + (Math.min(index + 1, dataset.length - 1) * 100) / (dataset.length - 1))
+    }
 
     useEffect(() => {
         function onResize() {
@@ -58,11 +66,11 @@ export function SlideshowView({ dataset }) {
             <div className='slideshow-image-handle'>
                 <Glyph
                     type={GLYPH_TYPE.CircleLeft}
-                    onClick={slideshowRef.current?.slickPrev}
+                    onClick={imageSlideshowRef.current?.slickPrev}
                 />
                 <Glyph
                     type={GLYPH_TYPE.CircleRight}
-                    onClick={slideshowRef.current?.slickNext}
+                    onClick={imageSlideshowRef.current?.slickNext}
                 />
             </div>
             <Slider
@@ -73,7 +81,7 @@ export function SlideshowView({ dataset }) {
                 infinite={true}
                 arrows={false}
                 className='slideshow-image'
-                ref={slideshowRef}>
+                ref={imageSlideshowRef}>
                 {dataset.map((item, idx) => (
                     <div
                         key={idx}
@@ -91,13 +99,42 @@ export function SlideshowView({ dataset }) {
             </Slider>
 
             {/* Video Slideshow */}
-            <ul className='slideshow-video'>
-                {dataset.map((item, idx) => (
-                    <li key={idx}>
-                        <video src={item.video_src} />
-                    </li>
-                ))}
-            </ul>
+            <div
+                className='slideshow-video-container'
+                style={{ animationName: showVideo && !isMobile ? 'showandfade' : 'hideandfade' }}>
+                <div className='slideshow-video'>
+                    <Slider
+                        speed={500}
+                        slidesToShow={2}
+                        slidesToScroll={1}
+                        slidesPerRow={1}
+                        arrows={false}
+                        infinite={false}
+                        autoplay={true}
+                        ref={videoSlideshowRef}
+                        afterChange={afterSlideVideo}>
+                        {dataset.map((item, idx) => (
+                            <div
+                                key={idx}
+                                className='item'>
+                                <video src={item.video_src} />
+                            </div>
+                        ))}
+                    </Slider>
+                    <div className='slideshow-video-status'>
+                        <img
+                            alt=''
+                            src='https://vrin.co.kr/assets/modal_close-3dfdf935.svg'
+                            onClick={() => {
+                                setShowVideo(false)
+                            }}
+                        />
+                        <div className='slideshow-video-progressbar'>
+                            <span style={{ transform: `translateX(${progress}%)` }} />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
