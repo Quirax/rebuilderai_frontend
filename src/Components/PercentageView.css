@@ -1,0 +1,4 @@
+div.percentage div.item {
+    display: flex;
+    flex-direction: column;
+}
