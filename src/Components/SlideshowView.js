@@ -2,7 +2,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import { Glyph, GLYPH_TYPE } from './Glyphs'
-import { useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 /**
  * An utility function that creates slideshow dataset item.
@@ -10,8 +10,14 @@ import { useRef } from 'react'
  * @param description a description of the item shown as label.
  * @param image_src an URL or path of background image describes the item.
  * @param video_src an URL or path of video describes the item.
+ * @param link_url an URL that will open when click the item
  */
-export const createSlideshowDatasetItem = (description, image_src, video_src) => ({ description, image_src, video_src })
+export const createSlideshowDatasetItem = (description, image_src, video_src, link_url) => ({
+    description,
+    image_src,
+    video_src,
+    link_url,
+})
 
 /**
  * A view to show items of dataset as slideshow.
@@ -20,6 +26,31 @@ export const createSlideshowDatasetItem = (description, image_src, video_src) =>
  */
 export function SlideshowView({ dataset }) {
     const slideshowRef = useRef()
+    const [isMobile, setIsMobile] = useState(!!window.matchMedia('(max-width: 768px)').matches)
+
+    const onClick = useCallback(
+        (idx) => {
+            console.log(isMobile)
+            if (isMobile) {
+                window.open(dataset[idx].link_url, '_blank')
+            }
+        },
+        [isMobile, dataset]
+    )
+
+    useEffect(() => {
+        function onResize() {
+            setIsMobile(!!window.matchMedia('(max-width: 768px)').matches)
+        }
+
+        window.addEventListener('resize', onResize)
+
+        onResize()
+
+        return () => {
+            window.removeEventListener('resize', onResize)
+        }
+    }, [])
 
     return (
         <>
@@ -46,7 +77,10 @@ export function SlideshowView({ dataset }) {
                 {dataset.map((item, idx) => (
                     <div
                         key={idx}
-                        className='item'>
+                        className='item'
+                        onClick={() => {
+                            onClick(idx)
+                        }}>
                         <img
                             src={item.image_src}
                             alt={item.description}

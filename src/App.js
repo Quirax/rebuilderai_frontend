@@ -71,33 +71,36 @@ function App() {
                                 {t('section[6].slideshow[0]')}
                                 <img
                                     alt=''
-                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
                                 />
                             </>,
-                            'https://vrin.co.kr/assets/carousel_thumbnail_1_laptop-4f6630bd.png',
-                            ''
+                            'https://vrin.co.kr/assets/carousel_thumbnail_1_mob-77f1fcc7.png',
+                            '',
+                            'https://www.instagram.com/p/Ckze-2mgevQ'
                         ),
                         createSlideshowDatasetItem(
                             <>
                                 {t('section[6].slideshow[1]')}
                                 <img
                                     alt=''
-                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
                                 />
                             </>,
-                            'https://vrin.co.kr/assets/carousel_thumbnail_2_laptop-f7569b5f.png',
-                            ''
+                            'https://vrin.co.kr/assets/carousel_thumbnail_2_mob-3a026f65.png',
+                            '',
+                            'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
                         ),
                         createSlideshowDatasetItem(
                             <>
                                 {t('section[6].slideshow[2]')}
                                 <img
                                     alt=''
-                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
                                 />
                             </>,
-                            'https://vrin.co.kr/assets/carousel_thumbnail_3_laptop-4ad7dc49.png',
-                            ''
+                            'https://vrin.co.kr/assets/carousel_thumbnail_3_mob-28ebdb88.png',
+                            '',
+                            'https://www.instagram.com/p/Ciw4xWSAhWU'
                         ),
                     ],
                 },
@@ -160,33 +163,36 @@ function App() {
                                 {t('section[6].slideshow[0]')}
                                 <img
                                     alt=''
-                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
                                 />
                             </>,
-                            'https://vrin.co.kr/assets/carousel_thumbnail_1_laptop-4f6630bd.png',
-                            ''
+                            'https://vrin.co.kr/assets/carousel_thumbnail_1_tablet-3d999a05.png',
+                            '',
+                            'https://www.instagram.com/p/Ckze-2mgevQ'
                         ),
                         createSlideshowDatasetItem(
                             <>
                                 {t('section[6].slideshow[1]')}
                                 <img
                                     alt=''
-                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
                                 />
                             </>,
-                            'https://vrin.co.kr/assets/carousel_thumbnail_2_laptop-f7569b5f.png',
-                            ''
+                            'https://vrin.co.kr/assets/carousel_thumbnail_2_tablet-862ac944.png',
+                            '',
+                            'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
                         ),
                         createSlideshowDatasetItem(
                             <>
                                 {t('section[6].slideshow[2]')}
                                 <img
                                     alt=''
-                                    src='https://vrin.co.kr/assets/arrow_outward-dd85a638.svg'
+                                    src='https://vrin.co.kr/assets/carousel_arrow-0a86d1b9.svg'
                                 />
                             </>,
-                            'https://vrin.co.kr/assets/carousel_thumbnail_3_laptop-4ad7dc49.png',
-                            ''
+                            'https://vrin.co.kr/assets/carousel_thumbnail_3_tablet-c70ea0d9.png',
+                            '',
+                            'https://www.instagram.com/p/Ciw4xWSAhWU'
                         ),
                     ],
                 },
@@ -253,7 +259,8 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_1_laptop-4f6630bd.png',
-                            ''
+                            '',
+                            'https://www.instagram.com/p/Ckze-2mgevQ'
                         ),
                         createSlideshowDatasetItem(
                             <>
@@ -264,7 +271,8 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_2_laptop-f7569b5f.png',
-                            ''
+                            '',
+                            'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
                         ),
                         createSlideshowDatasetItem(
                             <>
@@ -275,7 +283,8 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_3_laptop-4ad7dc49.png',
-                            ''
+                            '',
+                            'https://www.instagram.com/p/Ciw4xWSAhWU'
                         ),
                     ],
                 },
@@ -342,7 +351,8 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_1_PC-6a00eedf.png',
-                            ''
+                            '',
+                            'https://www.instagram.com/p/Ckze-2mgevQ'
                         ),
                         createSlideshowDatasetItem(
                             <>
@@ -353,7 +363,8 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_2_PC-774a2af5.png',
-                            ''
+                            '',
+                            'https://www.youtube.com/watch?v=FxhqKo1b5hA&feature=youtu.be'
                         ),
                         createSlideshowDatasetItem(
                             <>
@@ -364,7 +375,8 @@ function App() {
                                 />
                             </>,
                             'https://vrin.co.kr/assets/carousel_thumbnail_3_PC-471f312e.png',
-                            ''
+                            '',
+                            'https://www.instagram.com/p/Ciw4xWSAhWU'
                         ),
                     ],
                 },
