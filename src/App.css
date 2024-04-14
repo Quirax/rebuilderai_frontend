@@ -294,6 +294,14 @@ img#section-5-1-mouseleave {
     pointer-events: none;
 }
 
+img#section-5-2-mouseleave {
+    width: 86%;
+    position: absolute;
+    top: 165px;
+    right: 45px;
+    pointer-events: none;
+}
+
 div.mouseover-section div.mouseover-view div.mouseover {
     background: linear-gradient(225deg, rgba(255, 255, 255, 0.5) 0%, rgba(81, 30, 198, 0.35) 100%);
 }
@@ -320,6 +328,14 @@ video#section-5-1-mouseover-video {
     top: 220px;
     right: 78px;
     pointer-events: none;
+}
+
+img.swapped-image {
+    position: absolute;
+    top: 210px;
+    right: -30px;
+    pointer-events: none;
+    width: 100%;
 }
 
 @media screen and (max-width: 1280px) {
@@ -459,6 +475,13 @@ video#section-5-1-mouseover-video {
         right: -20px;
     }
 
+    img#section-5-2-mouseleave {
+        width: 85%;
+        min-width: 320px;
+        top: 115px;
+        right: 35px;
+    }
+
     img#section-5-1-mouseover-container {
         min-width: 415px;
         top: 20px;
@@ -469,6 +492,11 @@ video#section-5-1-mouseover-video {
         min-width: 152px;
         top: 16vw;
         right: 59px;
+    }
+
+    img.swapped-image {
+        top: 188px;
+        right: -12px;
     }
 }
 
@@ -595,6 +623,13 @@ video#section-5-1-mouseover-video {
         right: 5px;
     }
 
+    img#section-5-2-mouseleave {
+        width: 326px;
+        min-width: 326px;
+        top: -52px;
+        right: 51px;
+    }
+
     img#section-5-1-mouseover-container {
         width: 380px;
         min-width: 380px;
@@ -606,6 +641,12 @@ video#section-5-1-mouseover-video {
         width: 157px;
         top: -15px;
         right: 68px;
+    }
+
+    img.swapped-image {
+        width: 350px;
+        top: 10px;
+        right: -40px;
     }
 }
 
@@ -749,6 +790,13 @@ video#section-5-1-mouseover-video {
         right: -14px;
     }
 
+    img#section-5-2-mouseleave {
+        width: 43%;
+        min-width: 240px;
+        top: 22px;
+        right: 18px;
+    }
+
     div.mouseover-section div.mouseover-view div.mouseover div {
         font-size: 1.6rem;
     }
@@ -769,6 +817,12 @@ video#section-5-1-mouseover-video {
         width: 20%;
         top: 70px;
         right: 38px;
+    }
+
+    img.swapped-image {
+        width: 250px;
+        top: 111px;
+        right: -10px;
     }
 }
 
