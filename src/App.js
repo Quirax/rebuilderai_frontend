@@ -29,6 +29,28 @@ function App() {
                     'https://vrin.co.kr/assets/home_content_2_mob-2a21d63f.mp4',
                     'https://vrin.co.kr/assets/home_content_3_mob-a49c026f.mp4',
                 ],
+                percentageSection: [
+                    {
+                        description: lf2br(t('section[4].percent[1].description')),
+                        base: t('section[4].percent[1].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[1].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                    {
+                        description: lf2br(t('section[4].percent[0].description')),
+                        base: t('section[4].percent[0].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[0].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                ],
             },
             '(max-width: 768px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_tablet-00240f72.png',
@@ -36,6 +58,38 @@ function App() {
                     'https://vrin.co.kr/assets/home_content_1_tablet-372d0a93.mp4',
                     'https://vrin.co.kr/assets/home_content_2_tablet-8832672b.mp4',
                     'https://vrin.co.kr/assets/home_content_3_tablet-db992b6c.mp4',
+                ],
+                percentageSection: [
+                    {
+                        description: lf2br(t('section[4].percent[0].description')),
+                        base: t('section[4].percent[0].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[0].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                    {
+                        description: lf2br(t('section[4].percent[1].description')),
+                        base: t('section[4].percent[1].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[1].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                    {
+                        description: lf2br(t('section[4].percent[2].description')),
+                        base: t('section[4].percent[2].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[2].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
                 ],
             },
             '(max-width: 1024px)': {
@@ -45,6 +99,38 @@ function App() {
                     'https://vrin.co.kr/assets/home_content_2_PC-c0a5dbbe.mp4',
                     'https://vrin.co.kr/assets/home_content_3_PC-706ebb88.mp4',
                 ],
+                percentageSection: [
+                    {
+                        description: lf2br(t('section[4].percent[0].description')),
+                        base: t('section[4].percent[0].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[0].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                    {
+                        description: lf2br(t('section[4].percent[1].description')),
+                        base: t('section[4].percent[1].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[1].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                    {
+                        description: lf2br(t('section[4].percent[2].description')),
+                        base: t('section[4].percent[2].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[2].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                ],
             },
             '(min-width: 1025px)': {
                 imagedSection: 'https://vrin.co.kr/assets/home_A-1_PC-24bf28eb.png',
@@ -53,9 +139,41 @@ function App() {
                     'https://vrin.co.kr/assets/home_content_2_PC-c0a5dbbe.mp4',
                     'https://vrin.co.kr/assets/home_content_3_PC-706ebb88.mp4',
                 ],
+                percentageSection: [
+                    {
+                        description: lf2br(t('section[4].percent[0].description')),
+                        base: t('section[4].percent[0].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[0].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                    {
+                        description: lf2br(t('section[4].percent[1].description')),
+                        base: t('section[4].percent[1].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[1].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                    {
+                        description: lf2br(t('section[4].percent[2].description')),
+                        base: t('section[4].percent[2].base'),
+                        difference: (
+                            <>
+                                <span>{t('section[4].percent[2].value')}</span>
+                                <Glyph type={GLYPH_TYPE.DirectionDown} />
+                            </>
+                        ),
+                    },
+                ],
             },
         }),
-        []
+        [t]
     )
     const [media, setMedia] = useState(getValueAccordingToMedia(mediaPair))
 
@@ -150,21 +268,14 @@ function App() {
                 <h1>{lf2br(t('section[4].title'))}</h1>
                 <p>{lf2br(t('section[4].body'))}</p>
                 <PercentageContainer>
-                    <PercentageView
-                        description={lf2br(t('section[4].percent[0].description'))}
-                        base={t('section[4].percent[0].base')}>
-                        {t('section[4].percent[0].value')}↓ {/* TODO: convert to svg */}
-                    </PercentageView>
-                    <PercentageView
-                        description={lf2br(t('section[4].percent[1].description'))}
-                        base={t('section[4].percent[1].base')}>
-                        {t('section[4].percent[1].value')}↓ {/* TODO: convert to svg */}
-                    </PercentageView>
-                    <PercentageView
-                        description={lf2br(t('section[4].percent[2].description'))}
-                        base={t('section[4].percent[2].base')}>
-                        {t('section[4].percent[2].value')}↓ {/* TODO: convert to svg */}
-                    </PercentageView>
+                    {media.percentageSection.map((viewData, idx) => (
+                        <PercentageView
+                            key={idx}
+                            description={viewData.description}
+                            base={viewData.base}>
+                            {viewData.difference}
+                        </PercentageView>
+                    ))}
                 </PercentageContainer>
             </DescribingSection>
             <DescribingSection>

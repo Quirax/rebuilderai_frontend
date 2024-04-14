@@ -122,3 +122,11 @@ video {
     border: 0;
     vertical-align: baseline;
 }
+
+img,
+svg,
+i {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}

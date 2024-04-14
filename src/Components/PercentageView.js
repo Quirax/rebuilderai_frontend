@@ -1,7 +1,9 @@
+import './PercentageView.css'
+
 /**
  * A container to show percentage differences. Use `PercentageView`s as children.
  */
-const PercentageContainer = ({ children }) => <div className='percentage'>{children}</div>
+export const PercentageContainer = ({ children }) => <div className='percentage'>{children}</div>
 
 /**
  * A view to show percentage difference.
@@ -9,12 +11,12 @@ const PercentageContainer = ({ children }) => <div className='percentage'>{child
  * @param description a string or node describes the difference
  * @param base a string or node describes the base used to measure the difference
  */
-const PercentageView = ({ children, description, base }) => (
-    <div>
-        <div>{children}</div>
-        <div>{description}</div>
-        <div>{base}</div>
+export const PercentageView = ({ children, description, base, ...props }) => (
+    <div
+        className='item'
+        {...props}>
+        <div className='difference'>{children}</div>
+        <div className='description'>{description}</div>
+        <div className='base'>{base}</div>
     </div>
 )
-
-export { PercentageContainer, PercentageView }

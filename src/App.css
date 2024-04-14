@@ -177,6 +177,59 @@ section.describing div.contents > p {
     margin-top: 20px;
 }
 
+div.percentage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 64px;
+    padding: 64px 0px;
+    text-align: center;
+    border-radius: 16px;
+    background: linear-gradient(221deg, rgba(255, 255, 255, 0.2) -0.09%, rgba(81, 30, 198, 0.03) 99.94%);
+}
+
+div.percentage div.item {
+    gap: 12px;
+}
+
+div.percentage div.item div.difference {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+div.percentage div.item div.difference span {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 8rem;
+    font-weight: 800;
+    line-height: 120%;
+}
+
+div.percentage div.item div.difference svg {
+    width: 56px;
+    height: 56px;
+    margin-left: 8px;
+    fill: #3737cc;
+}
+
+div.percentage div.item div.description {
+    color: rgb(255, 255, 255);
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+div.percentage div.item div.base {
+    color: rgb(189, 193, 199);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+
 @media screen and (max-width: 1280px) {
     section.videoed div.contents div.right h1 {
         font-size: 4rem;
@@ -247,6 +300,32 @@ section.describing div.contents > p {
         font-size: 1.8rem;
         margin-top: 12px;
     }
+
+    div.percentage {
+        margin-top: 40px;
+        padding: 48px 0px;
+    }
+
+    div.percentage div.item {
+        gap: 4px;
+    }
+
+    div.percentage div.item div.difference span {
+        font-size: 5.6rem;
+    }
+
+    div.percentage div.item div.difference svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    div.percentage div.item div.description {
+        font-size: 1.8rem;
+    }
+
+    div.percentage div.item div.base {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -304,6 +383,24 @@ section.describing div.contents > p {
     }
 
     section.describing div.contents > p {
+        font-size: 1.6rem;
+    }
+
+    div.percentage {
+        margin-top: 32px;
+        padding: 32px 0px;
+    }
+
+    div.percentage div.item div.difference span {
+        font-size: 4rem;
+    }
+
+    div.percentage div.item div.difference svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    div.percentage div.item div.description {
         font-size: 1.6rem;
     }
 }
@@ -393,5 +490,36 @@ section.describing div.contents > p {
     section.describing div.contents > p {
         font-size: 1.2rem;
         margin-top: 10px;
+    }
+
+    div.percentage {
+        width: fit-content;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        margin: 24px auto auto;
+        padding: 32px 24px;
+        gap: 32px;
+    }
+
+    div.percentage div.item {
+        gap: 2px;
+    }
+
+    div.percentage div.item div.difference span {
+        font-size: 3.2rem;
+    }
+
+    div.percentage div.item div.difference svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    div.percentage div.item div.description {
+        font-size: 1.4rem;
+    }
+
+    div.percentage div.item div.base {
+        font-size: 0.8rem;
     }
 }
